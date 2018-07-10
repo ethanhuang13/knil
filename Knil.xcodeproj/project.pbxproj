@@ -1,0 +1,1195 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C0D219320E0F2A700FBFA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D219220E0F2A700FBFA86 /* AppDelegate.swift */; };
+		6C0D219A20E0F2A800FBFA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D219920E0F2A800FBFA86 /* Assets.xcassets */; };
+		6C0D219D20E0F2A800FBFA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D219B20E0F2A800FBFA86 /* LaunchScreen.storyboard */; };
+		6C0D21D520E0F53500FBFA86 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D21D420E0F53500FBFA86 /* README.md */; };
+		6C0D21D720E0F55300FBFA86 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D21D620E0F55300FBFA86 /* CHANGELOG.md */; };
+		6C0D21E620E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; };
+		6C0D21ED20E0F6B000FBFA86 /* KnilUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21EC20E0F6B000FBFA86 /* KnilUIKitTests.swift */; };
+		6C0D21EF20E0F6B000FBFA86 /* KnilUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C0D21F220E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; };
+		6C0D21F320E0F6B000FBFA86 /* KnilUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C0D220920E0F6B900FBFA86 /* KnilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; };
+		6C0D221220E0F6B900FBFA86 /* KnilKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0D220220E0F6B900FBFA86 /* KnilKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C0D221520E0F6B900FBFA86 /* KnilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; };
+		6C0D221620E0F6B900FBFA86 /* KnilKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C0D222120E0F6E800FBFA86 /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C820E0F36E00FBFA86 /* TableViewViewModel.swift */; };
+		6C0D222320E0F70400FBFA86 /* TableViewSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C920E0F36E00FBFA86 /* TableViewSectionViewModel.swift */; };
+		6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21CB20E0F36E00FBFA86 /* TableViewCellViewModel.swift */; };
+		6C0D222D20E0F75B00FBFA86 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */; };
+		6C0D223020E0F75B00FBFA86 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */; };
+		6C0D223420E0F75B00FBFA86 /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */; };
+		6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */; };
+		6CC52BCF20F49A2C00C7A5B0 /* AppIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BCE20F49A2C00C7A5B0 /* AppIDTests.swift */; };
+		6CC52BD020F49E9E00C7A5B0 /* AASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C520E0F2EE00FBFA86 /* AASA.swift */; };
+		6CC52BD220F49EAB00C7A5B0 /* AASAFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C120E0F2DC00FBFA86 /* AASAFetcher.swift */; };
+		6CC52BD420F49EAB00C7A5B0 /* iTunesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21D020E0F4E600FBFA86 /* iTunesFetcher.swift */; };
+		6CC52BD520F49EAB00C7A5B0 /* iTunesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21D220E0F4EC00FBFA86 /* iTunesApp.swift */; };
+		6CC52BD720F4A2BA00C7A5B0 /* AppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BD620F4A2BA00C7A5B0 /* AppID.swift */; };
+		6CC52BD920F4A30C00C7A5B0 /* AppDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BD820F4A30C00C7A5B0 /* AppDetail.swift */; };
+		6CC52BDB20F4A4A100C7A5B0 /* AppPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BDA20F4A4A100C7A5B0 /* AppPath.swift */; };
+		6CC52BDD20F4A4B500C7A5B0 /* AppPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BDC20F4A4B500C7A5B0 /* AppPathTests.swift */; };
+		6CC52BDF20F4A9A300C7A5B0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BDE20F4A9A300C7A5B0 /* Errors.swift */; };
+		6CC52BE420F4AA7F00C7A5B0 /* AppDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BE320F4AA7F00C7A5B0 /* AppDetailTests.swift */; };
+		6CC52BE620F4AC1E00C7A5B0 /* AppLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BE520F4AC1E00C7A5B0 /* AppLinks.swift */; };
+		6CC52BE820F4ADC200C7A5B0 /* AppLinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BE720F4ADC200C7A5B0 /* AppLinksTests.swift */; };
+		6CC52BEC20F4C0DD00C7A5B0 /* AASATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */; };
+		6CC52BEE20F4C53F00C7A5B0 /* test-AASA-unsigned in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52BED20F4C53F00C7A5B0 /* test-AASA-unsigned */; };
+		6CC52BF020F4C6EB00C7A5B0 /* AppIDsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BEF20F4C6EB00C7A5B0 /* AppIDsWrapper.swift */; };
+		6CC52BF220F4C80800C7A5B0 /* test-AASA-signed in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52BF120F4C80800C7A5B0 /* test-AASA-signed */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C0D21E720E0F6B000FBFA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0D21DC20E0F6B000FBFA86;
+			remoteInfo = KnilUIKit;
+		};
+		6C0D21E920E0F6B000FBFA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0D218E20E0F2A600FBFA86;
+			remoteInfo = Knil;
+		};
+		6C0D21F020E0F6B000FBFA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0D21DC20E0F6B000FBFA86;
+			remoteInfo = KnilUIKit;
+		};
+		6C0D220A20E0F6B900FBFA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0D21FF20E0F6B900FBFA86;
+			remoteInfo = KnilKit;
+		};
+		6C0D220C20E0F6B900FBFA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0D218E20E0F2A600FBFA86;
+			remoteInfo = Knil;
+		};
+		6C0D221320E0F6B900FBFA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0D21FF20E0F6B900FBFA86;
+			remoteInfo = KnilKit;
+		};
+		6C0D223220E0F75B00FBFA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0D222920E0F75B00FBFA86;
+			remoteInfo = ActionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C0D21F720E0F6B000FBFA86 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6C0D21F320E0F6B000FBFA86 /* KnilUIKit.framework in Embed Frameworks */,
+				6C0D221620E0F6B900FBFA86 /* KnilKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D223820E0F75B00FBFA86 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6C0D223420E0F75B00FBFA86 /* ActionExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C0D218F20E0F2A700FBFA86 /* Knil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0D219220E0F2A700FBFA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C0D219920E0F2A800FBFA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C0D219C20E0F2A800FBFA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C0D219E20E0F2A800FBFA86 /* Knil-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Knil-Info.plist"; sourceTree = "<group>"; };
+		6C0D21C120E0F2DC00FBFA86 /* AASAFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAFetcher.swift; sourceTree = "<group>"; };
+		6C0D21C520E0F2EE00FBFA86 /* AASA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASA.swift; sourceTree = "<group>"; };
+		6C0D21C820E0F36E00FBFA86 /* TableViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
+		6C0D21C920E0F36E00FBFA86 /* TableViewSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSectionViewModel.swift; sourceTree = "<group>"; };
+		6C0D21CB20E0F36E00FBFA86 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		6C0D21D020E0F4E600FBFA86 /* iTunesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesFetcher.swift; sourceTree = "<group>"; };
+		6C0D21D220E0F4EC00FBFA86 /* iTunesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesApp.swift; sourceTree = "<group>"; };
+		6C0D21D420E0F53500FBFA86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6C0D21D620E0F55300FBFA86 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KnilUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnilUIKit.h; sourceTree = "<group>"; };
+		6C0D21E020E0F6B000FBFA86 /* KnilUIKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilUIKit-Info.plist"; sourceTree = "<group>"; };
+		6C0D21E520E0F6B000FBFA86 /* KnilUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnilUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0D21EC20E0F6B000FBFA86 /* KnilUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnilUIKitTests.swift; sourceTree = "<group>"; };
+		6C0D21EE20E0F6B000FBFA86 /* KnilUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilUIKitTests-Info.plist"; sourceTree = "<group>"; };
+		6C0D220020E0F6B900FBFA86 /* KnilKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KnilKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0D220220E0F6B900FBFA86 /* KnilKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnilKit.h; sourceTree = "<group>"; };
+		6C0D220320E0F6B900FBFA86 /* KnilKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilKit-Info.plist"; sourceTree = "<group>"; };
+		6C0D220820E0F6B900FBFA86 /* KnilKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnilKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0D221120E0F6B900FBFA86 /* KnilKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilKitTests-Info.plist"; sourceTree = "<group>"; };
+		6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		6C0D222F20E0F75B00FBFA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6C0D223120E0F75B00FBFA86 /* ActionExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActionExtension-Info.plist"; sourceTree = "<group>"; };
+		6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6CC52BCE20F49A2C00C7A5B0 /* AppIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDTests.swift; sourceTree = "<group>"; };
+		6CC52BD620F4A2BA00C7A5B0 /* AppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppID.swift; sourceTree = "<group>"; };
+		6CC52BD820F4A30C00C7A5B0 /* AppDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetail.swift; sourceTree = "<group>"; };
+		6CC52BDA20F4A4A100C7A5B0 /* AppPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPath.swift; sourceTree = "<group>"; };
+		6CC52BDC20F4A4B500C7A5B0 /* AppPathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPathTests.swift; sourceTree = "<group>"; };
+		6CC52BDE20F4A9A300C7A5B0 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		6CC52BE320F4AA7F00C7A5B0 /* AppDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailTests.swift; sourceTree = "<group>"; };
+		6CC52BE520F4AC1E00C7A5B0 /* AppLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinks.swift; sourceTree = "<group>"; };
+		6CC52BE720F4ADC200C7A5B0 /* AppLinksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinksTests.swift; sourceTree = "<group>"; };
+		6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASATests.swift; sourceTree = "<group>"; };
+		6CC52BED20F4C53F00C7A5B0 /* test-AASA-unsigned */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-AASA-unsigned"; sourceTree = "<group>"; };
+		6CC52BEF20F4C6EB00C7A5B0 /* AppIDsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDsWrapper.swift; sourceTree = "<group>"; };
+		6CC52BF120F4C80800C7A5B0 /* test-AASA-signed */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test-AASA-signed"; path = "../../../../Downloads/test-AASA-signed"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C0D218C20E0F2A600FBFA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D21F220E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */,
+				6C0D221520E0F6B900FBFA86 /* KnilKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21D920E0F6B000FBFA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21E220E0F6B000FBFA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D21E620E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21FC20E0F6B900FBFA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D220520E0F6B900FBFA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D220920E0F6B900FBFA86 /* KnilKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D222720E0F75B00FBFA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C0D218620E0F2A600FBFA86 = {
+			isa = PBXGroup;
+			children = (
+				6C0D21D620E0F55300FBFA86 /* CHANGELOG.md */,
+				6C0D21D420E0F53500FBFA86 /* README.md */,
+				6C0D219120E0F2A700FBFA86 /* Knil */,
+				6C0D220120E0F6B900FBFA86 /* KnilKit */,
+				6C0D220E20E0F6B900FBFA86 /* KnilKitTests */,
+				6C0D21DE20E0F6B000FBFA86 /* KnilUIKit */,
+				6C0D21EB20E0F6B000FBFA86 /* KnilUIKitTests */,
+				6C0D222B20E0F75B00FBFA86 /* ActionExtension */,
+				6C0D219020E0F2A700FBFA86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C0D219020E0F2A700FBFA86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D218F20E0F2A700FBFA86 /* Knil.app */,
+				6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */,
+				6C0D21E520E0F6B000FBFA86 /* KnilUIKitTests.xctest */,
+				6C0D220020E0F6B900FBFA86 /* KnilKit.framework */,
+				6C0D220820E0F6B900FBFA86 /* KnilKitTests.xctest */,
+				6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C0D219120E0F2A700FBFA86 /* Knil */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D219220E0F2A700FBFA86 /* AppDelegate.swift */,
+				6C0D219920E0F2A800FBFA86 /* Assets.xcassets */,
+				6C0D219B20E0F2A800FBFA86 /* LaunchScreen.storyboard */,
+				6C0D219E20E0F2A800FBFA86 /* Knil-Info.plist */,
+			);
+			path = Knil;
+			sourceTree = "<group>";
+		};
+		6C0D21C020E0F2CD00FBFA86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D21C520E0F2EE00FBFA86 /* AASA.swift */,
+				6CC52BEF20F4C6EB00C7A5B0 /* AppIDsWrapper.swift */,
+				6CC52BE520F4AC1E00C7A5B0 /* AppLinks.swift */,
+				6CC52BD820F4A30C00C7A5B0 /* AppDetail.swift */,
+				6CC52BD620F4A2BA00C7A5B0 /* AppID.swift */,
+				6CC52BDA20F4A4A100C7A5B0 /* AppPath.swift */,
+				6C0D21D020E0F4E600FBFA86 /* iTunesFetcher.swift */,
+				6C0D21D220E0F4EC00FBFA86 /* iTunesApp.swift */,
+				6CC52BDE20F4A9A300C7A5B0 /* Errors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C0D21C720E0F36E00FBFA86 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D21C820E0F36E00FBFA86 /* TableViewViewModel.swift */,
+				6C0D21C920E0F36E00FBFA86 /* TableViewSectionViewModel.swift */,
+				6C0D21CB20E0F36E00FBFA86 /* TableViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6C0D21DE20E0F6B000FBFA86 /* KnilUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6CC52BCB20F45D4600C7A5B0 /* DetailViewController */,
+				6CC52BC820F45AC400C7A5B0 /* ListViewController */,
+				6C0D21C720E0F36E00FBFA86 /* ViewModels */,
+				6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */,
+				6C0D21E020E0F6B000FBFA86 /* KnilUIKit-Info.plist */,
+			);
+			path = KnilUIKit;
+			sourceTree = "<group>";
+		};
+		6C0D21EB20E0F6B000FBFA86 /* KnilUIKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D21EC20E0F6B000FBFA86 /* KnilUIKitTests.swift */,
+				6C0D21EE20E0F6B000FBFA86 /* KnilUIKitTests-Info.plist */,
+			);
+			path = KnilUIKitTests;
+			sourceTree = "<group>";
+		};
+		6C0D220120E0F6B900FBFA86 /* KnilKit */ = {
+			isa = PBXGroup;
+			children = (
+				6CC52BE020F4A9B200C7A5B0 /* API */,
+				6C0D21C020E0F2CD00FBFA86 /* Model */,
+				6C0D220220E0F6B900FBFA86 /* KnilKit.h */,
+				6C0D220320E0F6B900FBFA86 /* KnilKit-Info.plist */,
+			);
+			path = KnilKit;
+			sourceTree = "<group>";
+		};
+		6C0D220E20E0F6B900FBFA86 /* KnilKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D221120E0F6B900FBFA86 /* KnilKitTests-Info.plist */,
+				6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */,
+				6CC52BED20F4C53F00C7A5B0 /* test-AASA-unsigned */,
+				6CC52BF120F4C80800C7A5B0 /* test-AASA-signed */,
+				6CC52BE720F4ADC200C7A5B0 /* AppLinksTests.swift */,
+				6CC52BE320F4AA7F00C7A5B0 /* AppDetailTests.swift */,
+				6CC52BCE20F49A2C00C7A5B0 /* AppIDTests.swift */,
+				6CC52BDC20F4A4B500C7A5B0 /* AppPathTests.swift */,
+			);
+			path = KnilKitTests;
+			sourceTree = "<group>";
+		};
+		6C0D222B20E0F75B00FBFA86 /* ActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */,
+				6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */,
+				6C0D223120E0F75B00FBFA86 /* ActionExtension-Info.plist */,
+			);
+			path = ActionExtension;
+			sourceTree = "<group>";
+		};
+		6CC52BC820F45AC400C7A5B0 /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */,
+			);
+			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		6CC52BCB20F45D4600C7A5B0 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		6CC52BE020F4A9B200C7A5B0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D21C120E0F2DC00FBFA86 /* AASAFetcher.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6C0D21DA20E0F6B000FBFA86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D21EF20E0F6B000FBFA86 /* KnilUIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21FD20E0F6B900FBFA86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D221220E0F6B900FBFA86 /* KnilKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6C0D218E20E0F2A600FBFA86 /* Knil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0D21B720E0F2A900FBFA86 /* Build configuration list for PBXNativeTarget "Knil" */;
+			buildPhases = (
+				6C0D218B20E0F2A600FBFA86 /* Sources */,
+				6C0D218C20E0F2A600FBFA86 /* Frameworks */,
+				6C0D218D20E0F2A600FBFA86 /* Resources */,
+				6C0D21F720E0F6B000FBFA86 /* Embed Frameworks */,
+				6C0D223820E0F75B00FBFA86 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C0D21F120E0F6B000FBFA86 /* PBXTargetDependency */,
+				6C0D221420E0F6B900FBFA86 /* PBXTargetDependency */,
+				6C0D223320E0F75B00FBFA86 /* PBXTargetDependency */,
+			);
+			name = Knil;
+			productName = Knil;
+			productReference = 6C0D218F20E0F2A700FBFA86 /* Knil.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C0D21DC20E0F6B000FBFA86 /* KnilUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0D21F420E0F6B000FBFA86 /* Build configuration list for PBXNativeTarget "KnilUIKit" */;
+			buildPhases = (
+				6C0D21D820E0F6B000FBFA86 /* Sources */,
+				6C0D21D920E0F6B000FBFA86 /* Frameworks */,
+				6C0D21DA20E0F6B000FBFA86 /* Headers */,
+				6C0D21DB20E0F6B000FBFA86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KnilUIKit;
+			productName = KnilUIKit;
+			productReference = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C0D21E420E0F6B000FBFA86 /* KnilUIKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0D21F820E0F6B000FBFA86 /* Build configuration list for PBXNativeTarget "KnilUIKitTests" */;
+			buildPhases = (
+				6C0D21E120E0F6B000FBFA86 /* Sources */,
+				6C0D21E220E0F6B000FBFA86 /* Frameworks */,
+				6C0D21E320E0F6B000FBFA86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C0D21E820E0F6B000FBFA86 /* PBXTargetDependency */,
+				6C0D21EA20E0F6B000FBFA86 /* PBXTargetDependency */,
+			);
+			name = KnilUIKitTests;
+			productName = KnilUIKitTests;
+			productReference = 6C0D21E520E0F6B000FBFA86 /* KnilUIKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6C0D21FF20E0F6B900FBFA86 /* KnilKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0D221720E0F6B900FBFA86 /* Build configuration list for PBXNativeTarget "KnilKit" */;
+			buildPhases = (
+				6C0D21FB20E0F6B900FBFA86 /* Sources */,
+				6C0D21FC20E0F6B900FBFA86 /* Frameworks */,
+				6C0D21FD20E0F6B900FBFA86 /* Headers */,
+				6C0D21FE20E0F6B900FBFA86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KnilKit;
+			productName = KnilKit;
+			productReference = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C0D220720E0F6B900FBFA86 /* KnilKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0D221A20E0F6B900FBFA86 /* Build configuration list for PBXNativeTarget "KnilKitTests" */;
+			buildPhases = (
+				6C0D220420E0F6B900FBFA86 /* Sources */,
+				6C0D220520E0F6B900FBFA86 /* Frameworks */,
+				6C0D220620E0F6B900FBFA86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C0D220B20E0F6B900FBFA86 /* PBXTargetDependency */,
+				6C0D220D20E0F6B900FBFA86 /* PBXTargetDependency */,
+			);
+			name = KnilKitTests;
+			productName = KnilKitTests;
+			productReference = 6C0D220820E0F6B900FBFA86 /* KnilKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6C0D222920E0F75B00FBFA86 /* ActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0D223520E0F75B00FBFA86 /* Build configuration list for PBXNativeTarget "ActionExtension" */;
+			buildPhases = (
+				6C0D222620E0F75B00FBFA86 /* Sources */,
+				6C0D222720E0F75B00FBFA86 /* Frameworks */,
+				6C0D222820E0F75B00FBFA86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActionExtension;
+			productName = ActionExtension;
+			productReference = 6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C0D218720E0F2A600FBFA86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Elaborapp Co., Ltd.";
+				TargetAttributes = {
+					6C0D218E20E0F2A600FBFA86 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					6C0D21DC20E0F6B000FBFA86 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					6C0D21E420E0F6B000FBFA86 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 6C0D218E20E0F2A600FBFA86;
+					};
+					6C0D21FF20E0F6B900FBFA86 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					6C0D220720E0F6B900FBFA86 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 6C0D218E20E0F2A600FBFA86;
+					};
+					6C0D222920E0F75B00FBFA86 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 6C0D218A20E0F2A600FBFA86 /* Build configuration list for PBXProject "Knil" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C0D218620E0F2A600FBFA86;
+			productRefGroup = 6C0D219020E0F2A700FBFA86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C0D218E20E0F2A600FBFA86 /* Knil */,
+				6C0D21FF20E0F6B900FBFA86 /* KnilKit */,
+				6C0D220720E0F6B900FBFA86 /* KnilKitTests */,
+				6C0D21DC20E0F6B000FBFA86 /* KnilUIKit */,
+				6C0D21E420E0F6B000FBFA86 /* KnilUIKitTests */,
+				6C0D222920E0F75B00FBFA86 /* ActionExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C0D218D20E0F2A600FBFA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D21D520E0F53500FBFA86 /* README.md in Resources */,
+				6C0D21D720E0F55300FBFA86 /* CHANGELOG.md in Resources */,
+				6C0D219D20E0F2A800FBFA86 /* LaunchScreen.storyboard in Resources */,
+				6C0D219A20E0F2A800FBFA86 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21DB20E0F6B000FBFA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21E320E0F6B000FBFA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21FE20E0F6B900FBFA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D220620E0F6B900FBFA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC52BEE20F4C53F00C7A5B0 /* test-AASA-unsigned in Resources */,
+				6CC52BF220F4C80800C7A5B0 /* test-AASA-signed in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D222820E0F75B00FBFA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D223020E0F75B00FBFA86 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C0D218B20E0F2A600FBFA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D219320E0F2A700FBFA86 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21D820E0F6B000FBFA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D222320E0F70400FBFA86 /* TableViewSectionViewModel.swift in Sources */,
+				6C0D222120E0F6E800FBFA86 /* TableViewViewModel.swift in Sources */,
+				6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */,
+				6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */,
+				6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21E120E0F6B000FBFA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D21ED20E0F6B000FBFA86 /* KnilUIKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D21FB20E0F6B900FBFA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC52BD720F4A2BA00C7A5B0 /* AppID.swift in Sources */,
+				6CC52BE620F4AC1E00C7A5B0 /* AppLinks.swift in Sources */,
+				6CC52BF020F4C6EB00C7A5B0 /* AppIDsWrapper.swift in Sources */,
+				6CC52BD520F49EAB00C7A5B0 /* iTunesApp.swift in Sources */,
+				6CC52BD020F49E9E00C7A5B0 /* AASA.swift in Sources */,
+				6CC52BD920F4A30C00C7A5B0 /* AppDetail.swift in Sources */,
+				6CC52BD220F49EAB00C7A5B0 /* AASAFetcher.swift in Sources */,
+				6CC52BDB20F4A4A100C7A5B0 /* AppPath.swift in Sources */,
+				6CC52BDF20F4A9A300C7A5B0 /* Errors.swift in Sources */,
+				6CC52BD420F49EAB00C7A5B0 /* iTunesFetcher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D220420E0F6B900FBFA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC52BCF20F49A2C00C7A5B0 /* AppIDTests.swift in Sources */,
+				6CC52BE420F4AA7F00C7A5B0 /* AppDetailTests.swift in Sources */,
+				6CC52BDD20F4A4B500C7A5B0 /* AppPathTests.swift in Sources */,
+				6CC52BEC20F4C0DD00C7A5B0 /* AASATests.swift in Sources */,
+				6CC52BE820F4ADC200C7A5B0 /* AppLinksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0D222620E0F75B00FBFA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0D222D20E0F75B00FBFA86 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C0D21E820E0F6B000FBFA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0D21DC20E0F6B000FBFA86 /* KnilUIKit */;
+			targetProxy = 6C0D21E720E0F6B000FBFA86 /* PBXContainerItemProxy */;
+		};
+		6C0D21EA20E0F6B000FBFA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0D218E20E0F2A600FBFA86 /* Knil */;
+			targetProxy = 6C0D21E920E0F6B000FBFA86 /* PBXContainerItemProxy */;
+		};
+		6C0D21F120E0F6B000FBFA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0D21DC20E0F6B000FBFA86 /* KnilUIKit */;
+			targetProxy = 6C0D21F020E0F6B000FBFA86 /* PBXContainerItemProxy */;
+		};
+		6C0D220B20E0F6B900FBFA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0D21FF20E0F6B900FBFA86 /* KnilKit */;
+			targetProxy = 6C0D220A20E0F6B900FBFA86 /* PBXContainerItemProxy */;
+		};
+		6C0D220D20E0F6B900FBFA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0D218E20E0F2A600FBFA86 /* Knil */;
+			targetProxy = 6C0D220C20E0F6B900FBFA86 /* PBXContainerItemProxy */;
+		};
+		6C0D221420E0F6B900FBFA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0D21FF20E0F6B900FBFA86 /* KnilKit */;
+			targetProxy = 6C0D221320E0F6B900FBFA86 /* PBXContainerItemProxy */;
+		};
+		6C0D223320E0F75B00FBFA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0D222920E0F75B00FBFA86 /* ActionExtension */;
+			targetProxy = 6C0D223220E0F75B00FBFA86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C0D219B20E0F2A800FBFA86 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C0D219C20E0F2A800FBFA86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C0D222F20E0F75B00FBFA86 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C0D21B520E0F2A900FBFA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C0D21B620E0F2A900FBFA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C0D21B820E0F2A900FBFA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "$(SRCROOT)/Knil/Knil-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C0D21B920E0F2A900FBFA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "$(SRCROOT)/Knil/Knil-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6C0D21F520E0F6B000FBFA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/KnilUIKit/KnilUIKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C0D21F620E0F6B000FBFA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/KnilUIKit/KnilUIKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6C0D21F920E0F6B000FBFA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "KnilUIKitTests/KnilUIKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knil.app/Knil";
+			};
+			name = Debug;
+		};
+		6C0D21FA20E0F6B000FBFA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "KnilUIKitTests/KNilUIKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knil.app/Knil";
+			};
+			name = Release;
+		};
+		6C0D221820E0F6B900FBFA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/KnilKit/KnilKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C0D221920E0F6B900FBFA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/KnilKit/KnilKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6C0D221B20E0F6B900FBFA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "KnilKitTests/KnilKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knil.app/Knil";
+			};
+			name = Debug;
+		};
+		6C0D221C20E0F6B900FBFA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "KnilKitTests/KnilKitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knil.app/Knil";
+			};
+			name = Release;
+		};
+		6C0D223620E0F75B00FBFA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "$(SRCROOT)/ActionExtension/ActionExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil.ActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C0D223720E0F75B00FBFA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SE9N6X5V7C;
+				INFOPLIST_FILE = "$(SRCROOT)/ActionExtension/ActionExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil.ActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C0D218A20E0F2A600FBFA86 /* Build configuration list for PBXProject "Knil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0D21B520E0F2A900FBFA86 /* Debug */,
+				6C0D21B620E0F2A900FBFA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0D21B720E0F2A900FBFA86 /* Build configuration list for PBXNativeTarget "Knil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0D21B820E0F2A900FBFA86 /* Debug */,
+				6C0D21B920E0F2A900FBFA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0D21F420E0F6B000FBFA86 /* Build configuration list for PBXNativeTarget "KnilUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0D21F520E0F6B000FBFA86 /* Debug */,
+				6C0D21F620E0F6B000FBFA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0D21F820E0F6B000FBFA86 /* Build configuration list for PBXNativeTarget "KnilUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0D21F920E0F6B000FBFA86 /* Debug */,
+				6C0D21FA20E0F6B000FBFA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0D221720E0F6B900FBFA86 /* Build configuration list for PBXNativeTarget "KnilKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0D221820E0F6B900FBFA86 /* Debug */,
+				6C0D221920E0F6B900FBFA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0D221A20E0F6B900FBFA86 /* Build configuration list for PBXNativeTarget "KnilKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0D221B20E0F6B900FBFA86 /* Debug */,
+				6C0D221C20E0F6B900FBFA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0D223520E0F75B00FBFA86 /* Build configuration list for PBXNativeTarget "ActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0D223620E0F75B00FBFA86 /* Debug */,
+				6C0D223720E0F75B00FBFA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C0D218720E0F2A600FBFA86 /* Project object */;
+}

@@ -1,0 +1,381 @@
+{
+"activitycontinuation": {
+"apps": [
+"V9WTTPBFK9.com.facebook.drafts.internal",
+"4W5TH4RKQ2.com.facebook.drafts.internalDevelopment",
+"4W5TH4RKQ2.com.facebook.drafts.internalInHouse"
+]
+},
+"webcredentials": {
+"apps": [
+"T84QZS65DQ.com.facebook.Facebook",
+"T84QZS65DQ.com.facebook.Wilde",
+"3NW3KR6Q88.com.facebook.FacebookDevelopment",
+"3NW3KR6Q88.com.facebook.WildeInHouse"
+]
+},
+"applinks": {
+"apps": [],
+"details": [
+{
+"appID": "T84QZS65DQ.com.facebook.MessengerDev",
+"paths": [
+"/messenger/diode/*"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.Messenger",
+"paths": [
+"/messenger/diode/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.OrcaDevelopment",
+"paths": [
+"/messenger/diode/*"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.madman.internal",
+"paths": [
+"/adsmanager/*",
+"/ads/manager/d/*"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.MAdMan",
+"paths": [
+"/adsmanager/*",
+"/ads/manager/d/*"
+]
+},
+{
+"appID": "4W5TH4RKQ2.com.facebook.madman.internalInHouse",
+"paths": [
+"/adsmanager/*",
+"/ads/manager/d/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.madman.internalDevelopment",
+"paths": [
+"/adsmanager/*",
+"/ads/manager/d/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.mobilehome",
+"paths": [
+"/intern/calendar/*",
+"/intern/diffs/*",
+"/intern/room_profile/*",
+"/intern/sevmanager/*",
+"/intern/tasks/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.bizappsapproval.internalInHouse",
+"paths": [
+"/intern/approvals/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.NewPageAdminAppInHouse",
+"paths": [
+"/pma/*/inbox/*",
+"/pma/*/inbox/"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.PageAdminApp",
+"paths": [
+"/pma/*/inbox/*",
+"/pma/*/inbox/"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.Wilde",
+"paths": [
+"NOT /live/producer/*",
+"NOT /login.php",
+"NOT /logout.php",
+"NOT /v?.?/*",
+"NOT /v?.??/*",
+"NOT /login/*",
+"NOT /dialog/*",
+"NOT /plugins/*",
+"NOT /payments/paypal/redirect_from_paypal/*",
+"NOT /recover/*",
+"NOT /recovery/*",
+"NOT /work/*",
+"NOT /workplace",
+"NOT /messenger_platform/account_linking/*",
+"NOT /subscriptions/account-linking/*",
+"NOT /checkpoint/*",
+"NOT /sg/fundraiser/*",
+"NOT /sg/donate_check_out/*",
+"NOT /msg/*",
+"NOT /business/*",
+"NOT /iq/*",
+"NOT /analytics/*",
+"/",
+"*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.WildeInHouse",
+"paths": [
+"NOT /live/producer/*",
+"NOT /login.php",
+"NOT /logout.php",
+"NOT /v?.?/*",
+"NOT /v?.??/*",
+"NOT /login/*",
+"NOT /dialog/*",
+"NOT /plugins/*",
+"NOT /payments/paypal/redirect_from_paypal/*",
+"NOT /recover/*",
+"NOT /recovery/*",
+"NOT /work/*",
+"NOT /workplace",
+"NOT /messenger_platform/account_linking/*",
+"NOT /subscriptions/account-linking/*",
+"NOT /checkpoint/*",
+"NOT /sg/fundraiser/*",
+"NOT /sg/donate_check_out/*",
+"NOT /msg/*",
+"NOT /business/*",
+"NOT /iq/*",
+"NOT /analytics/*",
+"/",
+"*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.FacebookDevelopment",
+"paths": [
+"NOT /live/producer/*",
+"NOT /login.php",
+"NOT /logout.php",
+"NOT /v?.?/*",
+"NOT /v?.??/*",
+"NOT /login/*",
+"NOT /dialog/*",
+"NOT /plugins/*",
+"NOT /payments/paypal/redirect_from_paypal/*",
+"NOT /recover/*",
+"NOT /recovery/*",
+"NOT /work/*",
+"NOT /workplace",
+"NOT /messenger_platform/account_linking/*",
+"NOT /subscriptions/account-linking/*",
+"NOT /checkpoint/*",
+"NOT /sg/fundraiser/*",
+"NOT /sg/donate_check_out/*",
+"NOT /msg/*",
+"NOT /business/*",
+"NOT /iq/*",
+"NOT /analytics/*",
+"/",
+"*"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.Facebook",
+"paths": [
+"NOT /live/producer/*",
+"NOT /login.php",
+"NOT /logout.php",
+"NOT /v?.?/*",
+"NOT /v?.??/*",
+"NOT /login/*",
+"NOT /dialog/*",
+"NOT /help/*",
+"NOT /plugins/*",
+"NOT /payments/paypal/redirect_from_paypal/*",
+"NOT /recover/*",
+"NOT /recovery/*",
+"NOT /workplace",
+"NOT /messenger_platform/account_linking/*",
+"NOT /subscriptions/account-linking/*",
+"NOT /checkpoint/*",
+"NOT /sg/fundraiser/*",
+"NOT /sg/donate_check_out/*",
+"NOT /msg/*",
+"NOT /business/*",
+"NOT /iq/*",
+"NOT /analytics/*",
+"/",
+"/nd/*",
+"/qr/*",
+"/pg/*",
+"/iw/*",
+"/order_food/*",
+"/orderfood/*",
+"/fbrdr/*",
+"/retail_product/*",
+"/*/posts/*",
+"/groups/*/permalink/*",
+"/hashtag/*/",
+"/events/*/",
+"/*/photos/*",
+"/photo.php",
+"/jobs",
+"/jobs/*",
+"/job_opening/*",
+"/page_promotions/*",
+"/*/videos/*",
+"/marketplace/*",
+"/places/*",
+"/donate/*",
+"/fundraisers",
+"/fbcameraeffects/tryit/*",
+"/recommendations",
+"/device",
+"/xdl/approve/*",
+"/crisisresponse",
+"/crisisresponse/*",
+"/messenger_kids/redirect/*",
+"/commerce/*",
+"/watch/*",
+"/gaming"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.atwork",
+"paths": [
+"/work/email/",
+"/wnd"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.atwork.dev",
+"paths": [
+"/work/email/",
+"/work/*",
+"/wnd"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.atwork.internalDevelopment",
+"paths": [
+"/work/email/",
+"/wnd"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.atwork.internalInHouse",
+"paths": [
+"/work/email/",
+"/wnd"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.workchat.internalDevelopment",
+"paths": [
+"/work/email/"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.workchat.local",
+"paths": [
+"/work/email/"
+]
+},
+{
+"appID": "G2H69UVXYE.com.leaplock.ColorfulBalloonsDev",
+"paths": [
+"/apps/moments",
+"/apps/moments/*",
+"/l/*"
+]
+},
+{
+"appID": "G2H69UVXYE.com.leaplock.ColorfulBalloons",
+"paths": [
+"/apps/moments",
+"/apps/moments/*",
+"/l/*"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.Moments",
+"paths": [
+"/apps/moments",
+"/apps/moments/*",
+"/l/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.ShoerackInHouse",
+"paths": [
+"/apps/moments",
+"/apps/moments/*",
+"/l/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.shoerack.internalDevelopment",
+"paths": [
+"/apps/moments",
+"/apps/moments/*",
+"/l/*"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.Shoerack",
+"paths": [
+"/apps/moments",
+"/apps/moments/*",
+"/l/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.analyticsapp.internalDevelopment",
+"paths": [
+"/analytics/n",
+"/analytics/n/"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.analyticsapp.internalInHouse",
+"paths": [
+"/analytics/n",
+"/analytics/n/"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.analyticsapp.localDevelopment",
+"paths": [
+"/analytics/n",
+"/analytics/n/"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.analyticsapp",
+"paths": [
+"/analytics/n",
+"/analytics/n/"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.pixelcloud.internalInHouse",
+"paths": [
+"/intern/px/p/*"
+]
+},
+{
+"appID": "T84QZS65DQ.com.facebook.pixelcloud.internal",
+"paths": [
+"/intern/px/p/*"
+]
+},
+{
+"appID": "3NW3KR6Q88.com.facebook.pixelcloud.internalDevelopment",
+"paths": [
+"/intern/px/p/*"
+]
+}
+]
+}
+}
