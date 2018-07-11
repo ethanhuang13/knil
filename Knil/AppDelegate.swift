@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KnilKit
 import KnilUIKit
 
 @UIApplicationMain

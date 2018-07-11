@@ -32,7 +32,6 @@
 		6CC52BCF20F49A2C00C7A5B0 /* AppIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BCE20F49A2C00C7A5B0 /* AppIDTests.swift */; };
 		6CC52BD020F49E9E00C7A5B0 /* AASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C520E0F2EE00FBFA86 /* AASA.swift */; };
 		6CC52BD220F49EAB00C7A5B0 /* AASAFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C120E0F2DC00FBFA86 /* AASAFetcher.swift */; };
-		6CC52BD420F49EAB00C7A5B0 /* iTunesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21D020E0F4E600FBFA86 /* iTunesFetcher.swift */; };
 		6CC52BD520F49EAB00C7A5B0 /* iTunesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21D220E0F4EC00FBFA86 /* iTunesApp.swift */; };
 		6CC52BD720F4A2BA00C7A5B0 /* AppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BD620F4A2BA00C7A5B0 /* AppID.swift */; };
 		6CC52BD920F4A30C00C7A5B0 /* AppDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BD820F4A30C00C7A5B0 /* AppDetail.swift */; };
@@ -47,6 +46,11 @@
 		6CC52C0C20F524BF00C7A5B0 /* Twitter-signed-AASA in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52C0B20F524BF00C7A5B0 /* Twitter-signed-AASA */; };
 		6CC52C0E20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52C0D20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA */; };
 		6CC52C1320F5E5EE00C7A5B0 /* Facebook-signed-AASA in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52C1220F5E5ED00C7A5B0 /* Facebook-signed-AASA */; };
+		6CC52C1520F5ED6600C7A5B0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1420F5ED6600C7A5B0 /* Result.swift */; };
+		6CC52C1720F5F38700C7A5B0 /* iTunesSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1620F5F38700C7A5B0 /* iTunesSearchAPI.swift */; };
+		6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */; };
+		6CC52C1B20F6014700C7A5B0 /* AASAFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1A20F6014700C7A5B0 /* AASAFetcher.swift */; };
+		6CC52C1D20F60AD500C7A5B0 /* iTunesSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +142,6 @@
 		6C0D21C820E0F36E00FBFA86 /* TableViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
 		6C0D21C920E0F36E00FBFA86 /* TableViewSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSectionViewModel.swift; sourceTree = "<group>"; };
 		6C0D21CB20E0F36E00FBFA86 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
-		6C0D21D020E0F4E600FBFA86 /* iTunesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesFetcher.swift; sourceTree = "<group>"; };
 		6C0D21D220E0F4EC00FBFA86 /* iTunesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesApp.swift; sourceTree = "<group>"; };
 		6C0D21D420E0F53500FBFA86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6C0D21D620E0F55300FBFA86 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -173,6 +176,11 @@
 		6CC52C0B20F524BF00C7A5B0 /* Twitter-signed-AASA */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Twitter-signed-AASA"; sourceTree = "<group>"; };
 		6CC52C0D20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CATCHPLAY-unsigned-AASA"; sourceTree = "<group>"; };
 		6CC52C1220F5E5ED00C7A5B0 /* Facebook-signed-AASA */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Facebook-signed-AASA"; sourceTree = "<group>"; };
+		6CC52C1420F5ED6600C7A5B0 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		6CC52C1620F5F38700C7A5B0 /* iTunesSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAPI.swift; sourceTree = "<group>"; };
+		6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		6CC52C1A20F6014700C7A5B0 /* AASAFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAFetcher.swift; sourceTree = "<group>"; };
+		6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,9 +281,9 @@
 				6CC52BD820F4A30C00C7A5B0 /* AppDetail.swift */,
 				6CC52BD620F4A2BA00C7A5B0 /* AppID.swift */,
 				6CC52BDA20F4A4A100C7A5B0 /* AppPath.swift */,
-				6C0D21D020E0F4E600FBFA86 /* iTunesFetcher.swift */,
 				6C0D21D220E0F4EC00FBFA86 /* iTunesApp.swift */,
 				6CC52BDE20F4A9A300C7A5B0 /* Errors.swift */,
+				6CC52C1420F5ED6600C7A5B0 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +333,8 @@
 		6C0D220E20E0F6B900FBFA86 /* KnilKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */,
+				6CC52C1A20F6014700C7A5B0 /* AASAFetcher.swift */,
 				6C0D221120E0F6B900FBFA86 /* KnilKitTests-Info.plist */,
 				6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */,
 				6CC52C0D20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA */,
@@ -368,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				6C0D21C120E0F2DC00FBFA86 /* AASAFetcher.swift */,
+				6CC52C1620F5F38700C7A5B0 /* iTunesSearchAPI.swift */,
+				6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -656,8 +668,10 @@
 				6CC52BD920F4A30C00C7A5B0 /* AppDetail.swift in Sources */,
 				6CC52BD220F49EAB00C7A5B0 /* AASAFetcher.swift in Sources */,
 				6CC52BDB20F4A4A100C7A5B0 /* AppPath.swift in Sources */,
+				6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */,
+				6CC52C1720F5F38700C7A5B0 /* iTunesSearchAPI.swift in Sources */,
 				6CC52BDF20F4A9A300C7A5B0 /* Errors.swift in Sources */,
-				6CC52BD420F49EAB00C7A5B0 /* iTunesFetcher.swift in Sources */,
+				6CC52C1520F5ED6600C7A5B0 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,9 +681,11 @@
 			files = (
 				6CC52BCF20F49A2C00C7A5B0 /* AppIDTests.swift in Sources */,
 				6CC52BE420F4AA7F00C7A5B0 /* AppDetailTests.swift in Sources */,
+				6CC52C1D20F60AD500C7A5B0 /* iTunesSearchAPITests.swift in Sources */,
 				6CC52BDD20F4A4B500C7A5B0 /* AppPathTests.swift in Sources */,
 				6CC52BEC20F4C0DD00C7A5B0 /* AASATests.swift in Sources */,
 				6CC52BE820F4ADC200C7A5B0 /* AppLinksTests.swift in Sources */,
+				6CC52C1B20F6014700C7A5B0 /* AASAFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
