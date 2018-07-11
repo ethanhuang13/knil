@@ -14,4 +14,3 @@ public struct AppDetail: Codable {
     /// Because the system evaluates each path in the paths array in the order it is specified—and stops evaluating when a positive or negative match is found—you should specify high priority paths before low priority paths. 
     public let paths: [AppPath]
 }
-

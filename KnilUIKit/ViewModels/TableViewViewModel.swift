@@ -58,15 +58,18 @@ class TableViewViewModel: NSObject, UITableViewDataSource, UITableViewDelegate {
         return .none
     }
 
+    /*
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let cellViewModel = sections[indexPath.section].rows[indexPath.row]
         return cellViewModel.leadingSwipeActions
     }
 
+    @available(iOSApplicationExtension 11.0, *)
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let cellViewModel = sections[indexPath.section].rows[indexPath.row]
         return cellViewModel.trailingSwipeActions
     }
+     */
 }
 
 // MARK: - UIViewControllerPreviewingDelegate

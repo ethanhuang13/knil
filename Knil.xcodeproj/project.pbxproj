@@ -43,9 +43,10 @@
 		6CC52BE620F4AC1E00C7A5B0 /* AppLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BE520F4AC1E00C7A5B0 /* AppLinks.swift */; };
 		6CC52BE820F4ADC200C7A5B0 /* AppLinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BE720F4ADC200C7A5B0 /* AppLinksTests.swift */; };
 		6CC52BEC20F4C0DD00C7A5B0 /* AASATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */; };
-		6CC52BEE20F4C53F00C7A5B0 /* test-AASA-unsigned in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52BED20F4C53F00C7A5B0 /* test-AASA-unsigned */; };
 		6CC52BF020F4C6EB00C7A5B0 /* AppIDsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BEF20F4C6EB00C7A5B0 /* AppIDsWrapper.swift */; };
-		6CC52BF220F4C80800C7A5B0 /* test-AASA-signed in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52BF120F4C80800C7A5B0 /* test-AASA-signed */; };
+		6CC52C0C20F524BF00C7A5B0 /* Twitter-signed-AASA in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52C0B20F524BF00C7A5B0 /* Twitter-signed-AASA */; };
+		6CC52C0E20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52C0D20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA */; };
+		6CC52C1320F5E5EE00C7A5B0 /* Facebook-signed-AASA in Resources */ = {isa = PBXBuildFile; fileRef = 6CC52C1220F5E5ED00C7A5B0 /* Facebook-signed-AASA */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,9 +169,10 @@
 		6CC52BE520F4AC1E00C7A5B0 /* AppLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinks.swift; sourceTree = "<group>"; };
 		6CC52BE720F4ADC200C7A5B0 /* AppLinksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinksTests.swift; sourceTree = "<group>"; };
 		6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASATests.swift; sourceTree = "<group>"; };
-		6CC52BED20F4C53F00C7A5B0 /* test-AASA-unsigned */ = {isa = PBXFileReference; lastKnownFileType = text; path = "test-AASA-unsigned"; sourceTree = "<group>"; };
 		6CC52BEF20F4C6EB00C7A5B0 /* AppIDsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDsWrapper.swift; sourceTree = "<group>"; };
-		6CC52BF120F4C80800C7A5B0 /* test-AASA-signed */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test-AASA-signed"; path = "../../../../Downloads/test-AASA-signed"; sourceTree = "<group>"; };
+		6CC52C0B20F524BF00C7A5B0 /* Twitter-signed-AASA */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Twitter-signed-AASA"; sourceTree = "<group>"; };
+		6CC52C0D20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CATCHPLAY-unsigned-AASA"; sourceTree = "<group>"; };
+		6CC52C1220F5E5ED00C7A5B0 /* Facebook-signed-AASA */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Facebook-signed-AASA"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,8 +327,9 @@
 			children = (
 				6C0D221120E0F6B900FBFA86 /* KnilKitTests-Info.plist */,
 				6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */,
-				6CC52BED20F4C53F00C7A5B0 /* test-AASA-unsigned */,
-				6CC52BF120F4C80800C7A5B0 /* test-AASA-signed */,
+				6CC52C0D20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA */,
+				6CC52C0B20F524BF00C7A5B0 /* Twitter-signed-AASA */,
+				6CC52C1220F5E5ED00C7A5B0 /* Facebook-signed-AASA */,
 				6CC52BE720F4ADC200C7A5B0 /* AppLinksTests.swift */,
 				6CC52BE320F4AA7F00C7A5B0 /* AppDetailTests.swift */,
 				6CC52BCE20F49A2C00C7A5B0 /* AppIDTests.swift */,
@@ -596,8 +599,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CC52BEE20F4C53F00C7A5B0 /* test-AASA-unsigned in Resources */,
-				6CC52BF220F4C80800C7A5B0 /* test-AASA-signed in Resources */,
+				6CC52C0E20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA in Resources */,
+				6CC52C0C20F524BF00C7A5B0 /* Twitter-signed-AASA in Resources */,
+				6CC52C1320F5E5EE00C7A5B0 /* Facebook-signed-AASA in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,7 +792,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -842,7 +846,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

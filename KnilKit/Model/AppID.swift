@@ -12,6 +12,19 @@ public struct AppID: Codable {
     public let teamID: String
     public let bundleID: String
 
+    public init?(string: String) {
+        let substrings = string.split(separator: ".", maxSplits: 1, omittingEmptySubsequences: true)
+
+        if let first = substrings.first,
+            let last = substrings.last,
+            first != last {
+            teamID = String(first)
+            bundleID = String(last)
+        } else {
+            return nil
+        }
+    }
+
     public init(from decoder: Decoder) throws {
         let values = try decoder.singleValueContainer()
         let string = try values.decode(String.self)
@@ -24,7 +37,7 @@ public struct AppID: Codable {
             teamID = String(first)
             bundleID = String(last)
         } else {
-            throw KnilKitError.initError
+            throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: "AppID decode invalid"))
         }
     }
 

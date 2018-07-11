@@ -1,0 +1,34 @@
+{
+    "activitycontinuation": {
+        "apps": [
+            "MKK9DM2XD9.com.catchplay.AsiaPlay"
+        ]
+    },
+    "webcredentials": {
+        "apps": [
+            "MKK9DM2XD9.com.catchplay.AsiaPlay"
+        ]
+    },
+    "applinks": {
+        "apps": [],
+        "details": {
+            "MKK9DM2XD9.com.catchplay.AsiaPlay": {
+                "paths": [
+                    "/home", "/*/home",
+                    "/video-*",  "/*/video-*",
+                    "/search/genre/*", "/*/search/genre/*",
+                    "/search/person/*", "/*/search/person/*",
+                    "/search/awards", "/*/search/awards",
+                    "/search", "/*/search",
+                    "/search/trial/*", "/*/search/trial/*",
+                    "/search/new-release/*", "/*/search/new-release/*",
+                    "/search/subscription/*", "/*/search/subscription/*",
+                    "/search/popular/*", "/*/search/popular/*",
+                    "/search/editor-pick/*", "/*/search/editor-pick/*",
+                    "/ed-says", "/*/ed-says",
+                    "/ed-says-article-*", "/*/ed-says-article-*"
+                ]
+            }
+        }
+    }
+}

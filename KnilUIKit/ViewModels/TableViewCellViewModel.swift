@@ -18,8 +18,8 @@ struct TableViewCellViewModel {
     let cellStyle: UITableViewCellStyle
     let selectionStyle: UITableViewCellSelectionStyle
     let accessoryType: UITableViewCellAccessoryType
-    var leadingSwipeActions: UISwipeActionsConfiguration?
-    var trailingSwipeActions: UISwipeActionsConfiguration?
+//    var leadingSwipeActions: UISwipeActionsConfiguration?
+//    var trailingSwipeActions: UISwipeActionsConfiguration?
     var previewingViewController: UIViewControllerClosure?
     var selectAction: Closure
 
@@ -28,8 +28,8 @@ struct TableViewCellViewModel {
          cellStyle: UITableViewCellStyle = .default,
          selectionStyle: UITableViewCellSelectionStyle = .default,
          accessoryType: UITableViewCellAccessoryType = .disclosureIndicator,
-         leadingSwipeActions: UISwipeActionsConfiguration? = nil,
-         trailingSwipeActions: UISwipeActionsConfiguration? = nil,
+//         leadingSwipeActions: UISwipeActionsConfiguration? = nil,
+//         trailingSwipeActions: UISwipeActionsConfiguration? = nil,
          previewingViewController: UIViewControllerClosure? = nil,
          selectAction: @escaping Closure = {}
         ) {
@@ -39,8 +39,8 @@ struct TableViewCellViewModel {
         self.reuseIdentifier = String(cellStyle.rawValue)
         self.selectionStyle = selectionStyle
         self.accessoryType = accessoryType
-        self.leadingSwipeActions = leadingSwipeActions
-        self.trailingSwipeActions = trailingSwipeActions
+//        self.leadingSwipeActions = leadingSwipeActions
+//        self.trailingSwipeActions = trailingSwipeActions
         self.previewingViewController = previewingViewController
         self.selectAction = selectAction
     }
