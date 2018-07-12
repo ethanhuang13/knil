@@ -26,7 +26,6 @@ class AASAFetcherTests: XCTestCase {
             "twitter.com",
             "facebook.com",
             "netflix.com",
-            "www.catchplay.com",
             "instagram.com",
             "yelp.com",
             "amazon.com",
