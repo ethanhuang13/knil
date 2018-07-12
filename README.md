@@ -1,5 +1,7 @@
 # Knil
 
+![](https://travis-ci.org/ethanhuang13/knil.svg?branch=master)
+
 Universal Link tester.
 
 ## Features
