@@ -20,6 +20,10 @@ public struct AASAFetcher {
             return
         }
 
+        fetch(url: url, completion: completion)
+    }
+
+    public static func fetch(url: URL, completion: @escaping (Result<AASA>) -> Void) {
         url.performRequest { (result) in
             switch result {
             case .value(let data):

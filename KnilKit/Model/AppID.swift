@@ -43,7 +43,10 @@ public struct AppID: Codable {
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        let string = teamID + "." + bundleID
-        try container.encode(string)
+        try container.encode(appID)
+    }
+
+    public var appID: String {
+        return teamID + "." + bundleID
     }
 }

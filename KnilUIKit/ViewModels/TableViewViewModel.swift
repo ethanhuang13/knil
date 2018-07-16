@@ -15,7 +15,8 @@ class TableViewViewModel: NSObject, UITableViewDataSource, UITableViewDelegate {
     init(tableViewController: UITableViewController) {
         super.init()
         self.tableViewController = tableViewController
-        tableViewController.registerForPreviewing(with: self, sourceView: tableViewController.view)
+        self.tableViewController?.tableView.dataSource = self
+        self.tableViewController?.tableView.delegate = self
     }
 
     // MARK: - UITableViewDataSource

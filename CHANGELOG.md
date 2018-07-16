@@ -8,3 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - AASA data model and fetcher
 - iTunes App data model and fetcher
+- ListViewController
+- DetailViewController
+- AASAURLSuggestor
+- UserDataStore

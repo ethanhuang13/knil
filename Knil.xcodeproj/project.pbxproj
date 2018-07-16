@@ -27,6 +27,11 @@
 		6C0D222D20E0F75B00FBFA86 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */; };
 		6C0D223020E0F75B00FBFA86 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */; };
 		6C0D223420E0F75B00FBFA86 /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6C3D007920FC9CF1007A567A /* UserAASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007820FC9CF1007A567A /* UserAASA.swift */; };
+		6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007B20FC9E00007A567A /* UserDataStore.swift */; };
+		6C3D007E20FCA505007A567A /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007D20FCA505007A567A /* MulticastDelegate.swift */; };
+		6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007F20FCBEA1007A567A /* URLOpener.swift */; };
+		6CA03A6D20FB1DC3004BA91D /* AASAURLSuggestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */; };
 		6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */; };
 		6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */; };
 		6CC52BCF20F49A2C00C7A5B0 /* AppIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BCE20F49A2C00C7A5B0 /* AppIDTests.swift */; };
@@ -51,6 +56,12 @@
 		6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */; };
 		6CC52C1B20F6014700C7A5B0 /* AASAFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */; };
 		6CC52C1D20F60AD500C7A5B0 /* iTunesSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */; };
+		6CD53D4B20F7149E002FF804 /* AASAValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D4A20F7149E002FF804 /* AASAValidator.swift */; };
+		6CD53D4D20F715E7002FF804 /* AASAValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D4C20F715E7002FF804 /* AASAValidatorError.swift */; };
+		6CD53D4F20F71A96002FF804 /* KnilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; };
+		6CD53D5220F71AAC002FF804 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D5120F71AAC002FF804 /* String+Extension.swift */; };
+		6CD53D5520F71B6D002FF804 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */; };
+		6CEB657720FCEDCB008E0213 /* UserAASA+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +171,11 @@
 		6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		6C0D222F20E0F75B00FBFA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6C0D223120E0F75B00FBFA86 /* ActionExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActionExtension-Info.plist"; sourceTree = "<group>"; };
+		6C3D007820FC9CF1007A567A /* UserAASA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAASA.swift; sourceTree = "<group>"; };
+		6C3D007B20FC9E00007A567A /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		6C3D007D20FCA505007A567A /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		6C3D007F20FCBEA1007A567A /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
+		6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAURLSuggestor.swift; sourceTree = "<group>"; };
 		6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6CC52BCE20F49A2C00C7A5B0 /* AppIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDTests.swift; sourceTree = "<group>"; };
@@ -181,6 +197,11 @@
 		6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAFetcherTests.swift; sourceTree = "<group>"; };
 		6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAPITests.swift; sourceTree = "<group>"; };
+		6CD53D4A20F7149E002FF804 /* AASAValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAValidator.swift; sourceTree = "<group>"; };
+		6CD53D4C20F715E7002FF804 /* AASAValidatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAValidatorError.swift; sourceTree = "<group>"; };
+		6CD53D5120F71AAC002FF804 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
+		6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAASA+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD53D4F20F71A96002FF804 /* KnilKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +267,7 @@
 				6C0D21EB20E0F6B000FBFA86 /* KnilUIKitTests */,
 				6C0D222B20E0F75B00FBFA86 /* ActionExtension */,
 				6C0D219020E0F2A700FBFA86 /* Products */,
+				6CD53D4E20F71A96002FF804 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				6C0D21C520E0F2EE00FBFA86 /* AASA.swift */,
+				6CD53D4A20F7149E002FF804 /* AASAValidator.swift */,
 				6CC52BEF20F4C6EB00C7A5B0 /* AppIDsWrapper.swift */,
 				6CC52BE520F4AC1E00C7A5B0 /* AppLinks.swift */,
 				6CC52BD820F4A30C00C7A5B0 /* AppDetail.swift */,
@@ -283,6 +307,7 @@
 				6CC52BDA20F4A4A100C7A5B0 /* AppPath.swift */,
 				6C0D21D220E0F4EC00FBFA86 /* iTunesApp.swift */,
 				6CC52BDE20F4A9A300C7A5B0 /* Errors.swift */,
+				6CD53D4C20F715E7002FF804 /* AASAValidatorError.swift */,
 				6CC52C1420F5ED6600C7A5B0 /* Result.swift */,
 			);
 			path = Model;
@@ -301,11 +326,13 @@
 		6C0D21DE20E0F6B000FBFA86 /* KnilUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				6CC52BCB20F45D4600C7A5B0 /* DetailViewController */,
+				6CD53D5320F71B64002FF804 /* Extension */,
 				6CC52BC820F45AC400C7A5B0 /* ListViewController */,
+				6CC52BCB20F45D4600C7A5B0 /* DetailViewController */,
 				6C0D21C720E0F36E00FBFA86 /* ViewModels */,
 				6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */,
 				6C0D21E020E0F6B000FBFA86 /* KnilUIKit-Info.plist */,
+				6C3D007F20FCBEA1007A567A /* URLOpener.swift */,
 			);
 			path = KnilUIKit;
 			sourceTree = "<group>";
@@ -322,6 +349,9 @@
 		6C0D220120E0F6B900FBFA86 /* KnilKit */ = {
 			isa = PBXGroup;
 			children = (
+				6C3D007A20FC9DCE007A567A /* UserData */,
+				6CA03A6B20FB1DB9004BA91D /* Tool */,
+				6CD53D5020F71AA1002FF804 /* Extension */,
 				6CC52BE020F4A9B200C7A5B0 /* API */,
 				6C0D21C020E0F2CD00FBFA86 /* Model */,
 				6C0D220220E0F6B900FBFA86 /* KnilKit.h */,
@@ -358,6 +388,24 @@
 			path = ActionExtension;
 			sourceTree = "<group>";
 		};
+		6C3D007A20FC9DCE007A567A /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				6C3D007B20FC9E00007A567A /* UserDataStore.swift */,
+				6C3D007820FC9CF1007A567A /* UserAASA.swift */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
+		6CA03A6B20FB1DB9004BA91D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */,
+				6C3D007D20FCA505007A567A /* MulticastDelegate.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		6CC52BC820F45AC400C7A5B0 /* ListViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +430,30 @@
 				6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		6CD53D4E20F71A96002FF804 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CD53D5020F71AA1002FF804 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6CD53D5120F71AAC002FF804 /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6CD53D5320F71B64002FF804 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */,
+				6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,9 +714,12 @@
 			files = (
 				6C0D222320E0F70400FBFA86 /* TableViewSectionViewModel.swift in Sources */,
 				6C0D222120E0F6E800FBFA86 /* TableViewViewModel.swift in Sources */,
+				6CD53D5520F71B6D002FF804 /* UIAlertAction+Extension.swift in Sources */,
 				6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */,
 				6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */,
+				6CEB657720FCEDCB008E0213 /* UserAASA+Extension.swift in Sources */,
 				6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */,
+				6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,14 +738,21 @@
 				6CC52BD720F4A2BA00C7A5B0 /* AppID.swift in Sources */,
 				6CC52BE620F4AC1E00C7A5B0 /* AppLinks.swift in Sources */,
 				6CC52BF020F4C6EB00C7A5B0 /* AppIDsWrapper.swift in Sources */,
+				6CA03A6D20FB1DC3004BA91D /* AASAURLSuggestor.swift in Sources */,
+				6C3D007920FC9CF1007A567A /* UserAASA.swift in Sources */,
 				6CC52BD520F49EAB00C7A5B0 /* iTunesApp.swift in Sources */,
 				6CC52BD020F49E9E00C7A5B0 /* AASA.swift in Sources */,
 				6CC52BD920F4A30C00C7A5B0 /* AppDetail.swift in Sources */,
 				6CC52BD220F49EAB00C7A5B0 /* AASAFetcher.swift in Sources */,
+				6CD53D4D20F715E7002FF804 /* AASAValidatorError.swift in Sources */,
+				6CD53D4B20F7149E002FF804 /* AASAValidator.swift in Sources */,
 				6CC52BDB20F4A4A100C7A5B0 /* AppPath.swift in Sources */,
+				6C3D007E20FCA505007A567A /* MulticastDelegate.swift in Sources */,
+				6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */,
 				6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */,
 				6CC52C1720F5F38700C7A5B0 /* iTunesSearchAPI.swift in Sources */,
 				6CC52BDF20F4A9A300C7A5B0 /* Errors.swift in Sources */,
+				6CD53D5220F71AAC002FF804 /* String+Extension.swift in Sources */,
 				6CC52C1520F5ED6600C7A5B0 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

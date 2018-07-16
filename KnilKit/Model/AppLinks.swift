@@ -9,11 +9,13 @@
 import Foundation
 
 public struct AppLinks: Codable {
+    /// The apps key in an apple-app-site-association file must be present and its value must be an empty array
     public let apps: [AppID]?
     public let details: [AppDetail]
 
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+
         apps = try values.decodeIfPresent([AppID].self, forKey: .apps)
 
         do {

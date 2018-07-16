@@ -47,7 +47,9 @@ struct TableViewCellViewModel {
 
     func configure(_ cell: UITableViewCell) {
         cell.textLabel?.text = title
+        cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = subtitle
+        cell.detailTextLabel?.numberOfLines = 0
         cell.selectionStyle = selectionStyle
         cell.accessoryType = accessoryType
     }

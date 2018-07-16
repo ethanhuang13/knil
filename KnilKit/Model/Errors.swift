@@ -11,10 +11,4 @@ import Foundation
 public enum KnilKitError: Error {
     case invalidURLString(String)
     case noData
-
-    /// For apps that run in iOS 9.3.1 and later, the uncompressed size of the apple-app-site-association file must be no greater than 128 KB, regardless of whether the file is signed.
-    case fileSizeTooLarge
-
-    /// Don’t append .json to the apple-app-site-association filename
-    case hasFileExtension
 }

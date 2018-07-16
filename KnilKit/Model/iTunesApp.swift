@@ -11,12 +11,14 @@ import Foundation
 public struct iTunesApp: Codable {
     public let appStoreURL: URL
     public let bundleID: String
+    public let productID: Int
     public let appName: String
     public let iconURL: URL
 
     enum CodingKeys: String, CodingKey {
         case appStoreURL = "trackViewUrl"
         case bundleID = "bundleId"
+        case productID = "trackId"
         case appName = "trackName"
         case iconURL = "artworkUrl512"
     }

@@ -33,3 +33,13 @@ public struct AppPath: Codable {
         try container.encode(string)
     }
 }
+
+extension AppPath {
+    public func url(hostname: Hostname) -> URL? {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = hostname
+        urlComponents.path = pathString
+        return urlComponents.url
+    }
+}
