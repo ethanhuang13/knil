@@ -26,7 +26,6 @@
 		6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21CB20E0F36E00FBFA86 /* TableViewCellViewModel.swift */; };
 		6C0D222D20E0F75B00FBFA86 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */; };
 		6C0D223020E0F75B00FBFA86 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */; };
-		6C0D223420E0F75B00FBFA86 /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6C3D007920FC9CF1007A567A /* UserAASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007820FC9CF1007A567A /* UserAASA.swift */; };
 		6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007B20FC9E00007A567A /* UserDataStore.swift */; };
 		6C3D007E20FCA505007A567A /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007D20FCA505007A567A /* MulticastDelegate.swift */; };
@@ -62,6 +61,10 @@
 		6CD53D5220F71AAC002FF804 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D5120F71AAC002FF804 /* String+Extension.swift */; };
 		6CD53D5520F71B6D002FF804 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */; };
 		6CEB657720FCEDCB008E0213 /* UserAASA+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */; };
+		6CEFF19720FDD1F30087BD79 /* UserAppID+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19620FDD1F30087BD79 /* UserAppID+Extension.swift */; };
+		6CEFF19920FDD42E0087BD79 /* UserAppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19820FDD42E0087BD79 /* UserAppID.swift */; };
+		6CEFF19D20FDF6D20087BD79 /* AppPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19C20FDF6D20087BD79 /* AppPath+Extension.swift */; };
+		6CEFF1A020FDFB0E0087BD79 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19F20FDFB0E0087BD79 /* LinkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,13 +110,6 @@
 			remoteGlobalIDString = 6C0D21FF20E0F6B900FBFA86;
 			remoteInfo = KnilKit;
 		};
-		6C0D223220E0F75B00FBFA86 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C0D218720E0F2A600FBFA86 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6C0D222920E0F75B00FBFA86;
-			remoteInfo = ActionExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,17 +123,6 @@
 				6C0D221620E0F6B900FBFA86 /* KnilKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6C0D223820E0F75B00FBFA86 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				6C0D223420E0F75B00FBFA86 /* ActionExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -202,6 +187,10 @@
 		6CD53D5120F71AAC002FF804 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
 		6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAASA+Extension.swift"; sourceTree = "<group>"; };
+		6CEFF19620FDD1F30087BD79 /* UserAppID+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAppID+Extension.swift"; sourceTree = "<group>"; };
+		6CEFF19820FDD42E0087BD79 /* UserAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAppID.swift; sourceTree = "<group>"; };
+		6CEFF19C20FDF6D20087BD79 /* AppPath+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppPath+Extension.swift"; sourceTree = "<group>"; };
+		6CEFF19F20FDFB0E0087BD79 /* LinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +318,7 @@
 				6CD53D5320F71B64002FF804 /* Extension */,
 				6CC52BC820F45AC400C7A5B0 /* ListViewController */,
 				6CC52BCB20F45D4600C7A5B0 /* DetailViewController */,
+				6CEFF19E20FDFAD30087BD79 /* LinkViewController */,
 				6C0D21C720E0F36E00FBFA86 /* ViewModels */,
 				6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */,
 				6C0D21E020E0F6B000FBFA86 /* KnilUIKit-Info.plist */,
@@ -393,6 +383,7 @@
 			children = (
 				6C3D007B20FC9E00007A567A /* UserDataStore.swift */,
 				6C3D007820FC9CF1007A567A /* UserAASA.swift */,
+				6CEFF19820FDD42E0087BD79 /* UserAppID.swift */,
 			);
 			path = UserData;
 			sourceTree = "<group>";
@@ -452,8 +443,18 @@
 			children = (
 				6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */,
 				6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */,
+				6CEFF19C20FDF6D20087BD79 /* AppPath+Extension.swift */,
+				6CEFF19620FDD1F30087BD79 /* UserAppID+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		6CEFF19E20FDFAD30087BD79 /* LinkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CEFF19F20FDFB0E0087BD79 /* LinkViewController.swift */,
+			);
+			path = LinkViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,14 +487,12 @@
 				6C0D218C20E0F2A600FBFA86 /* Frameworks */,
 				6C0D218D20E0F2A600FBFA86 /* Resources */,
 				6C0D21F720E0F6B000FBFA86 /* Embed Frameworks */,
-				6C0D223820E0F75B00FBFA86 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				6C0D21F120E0F6B000FBFA86 /* PBXTargetDependency */,
 				6C0D221420E0F6B900FBFA86 /* PBXTargetDependency */,
-				6C0D223320E0F75B00FBFA86 /* PBXTargetDependency */,
 			);
 			name = Knil;
 			productName = Knil;
@@ -712,14 +711,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEFF19720FDD1F30087BD79 /* UserAppID+Extension.swift in Sources */,
 				6C0D222320E0F70400FBFA86 /* TableViewSectionViewModel.swift in Sources */,
 				6C0D222120E0F6E800FBFA86 /* TableViewViewModel.swift in Sources */,
 				6CD53D5520F71B6D002FF804 /* UIAlertAction+Extension.swift in Sources */,
+				6CEFF19D20FDF6D20087BD79 /* AppPath+Extension.swift in Sources */,
 				6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */,
 				6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */,
 				6CEB657720FCEDCB008E0213 /* UserAASA+Extension.swift in Sources */,
 				6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */,
 				6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */,
+				6CEFF1A020FDFB0E0087BD79 /* LinkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,6 +752,7 @@
 				6C3D007E20FCA505007A567A /* MulticastDelegate.swift in Sources */,
 				6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */,
 				6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */,
+				6CEFF19920FDD42E0087BD79 /* UserAppID.swift in Sources */,
 				6CC52C1720F5F38700C7A5B0 /* iTunesSearchAPI.swift in Sources */,
 				6CC52BDF20F4A9A300C7A5B0 /* Errors.swift in Sources */,
 				6CD53D5220F71AAC002FF804 /* String+Extension.swift in Sources */,
@@ -811,11 +814,6 @@
 			isa = PBXTargetDependency;
 			target = 6C0D21FF20E0F6B900FBFA86 /* KnilKit */;
 			targetProxy = 6C0D221320E0F6B900FBFA86 /* PBXContainerItemProxy */;
-		};
-		6C0D223320E0F75B00FBFA86 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6C0D222920E0F75B00FBFA86 /* ActionExtension */;
-			targetProxy = 6C0D223220E0F75B00FBFA86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -28,8 +28,7 @@ public class ListViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddingAASAAlertController))
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddingAASAAlertController))
 
         NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive), name: .UIApplicationWillResignActive, object: nil)
 
@@ -50,84 +49,94 @@ public class ListViewController: UITableViewController {
     }
 
     @objc private func presentAddingAASAAlertController() {
-        let alertController = UIAlertController(title: "Enter hostname or URL".localized(), message: "", preferredStyle: .alert)
-        alertController.addTextField { (textField) in
-            textField.placeholder = "e.g. twitter.com".localized()
-            textField.text = "twitter.com"
-            textField.clearButtonMode = .always
-            textField.keyboardType = .URL
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Enter hostname or URL".localized(), message: "", preferredStyle: .alert)
+            alertController.addTextField { (textField) in
+                textField.placeholder = "e.g. twitter.com".localized()
+                //            textField.text = "twitter.com"
+                textField.clearButtonMode = .always
+                textField.keyboardType = .URL
 
-            if #available(iOSApplicationExtension 10.0, *) {
-                textField.textContentType = .URL
-            }
-        }
-        alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
-            guard let string = alertController.textFields?.first?.text else {
-                fatalError("Missing textField")
-            }
-
-            AASAURLSuggestor.suggestAASA(from: string, completion: { (result) in
-                switch result {
-                case .value(let userAASA):
-                    self.presentConfirmURLAlertController(urlString: userAASA.url.absoluteString, suggested: userAASA)
-                case .error(let error):
-                    print(error.localizedDescription)
-                    self.presentConfirmURLAlertController(urlString: string)
+                if #available(iOSApplicationExtension 10.0, *) {
+                    textField.textContentType = .URL
                 }
-            })
-        }))
-        alertController.addAction(.cancelAction)
-        present(alertController, animated: true, completion: { })
+            }
+            alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
+                guard let string = alertController.textFields?.first?.text else {
+                    fatalError("Missing textField")
+                }
+
+                AASAURLSuggestor.suggestAASA(from: string, completion: { (result) in
+                    switch result {
+                    case .value(let userAASA):
+                        self.presentConfirmURLAlertController(urlString: userAASA.url.absoluteString, suggested: userAASA)
+                    case .error(let error):
+                        print(error.localizedDescription)
+                        self.presentConfirmURLAlertController(urlString: AASAURLSuggestor.suggestURLString(from: string))
+                    }
+                })
+            }))
+            alertController.addAction(.cancelAction)
+            self.present(alertController, animated: true, completion: { })
+        }
     }
 
     private func presentConfirmURLAlertController(urlString: String, suggested userAASA: UserAASA? = nil) {
-        let alertController = UIAlertController(title: "Confirm or Adjust".localized(), message: "Suggested AASA URL:\n\(urlString)".localized(), preferredStyle: .alert)
-        alertController.addTextField { (textField) in
-            textField.text = urlString
-        }
+        DispatchQueue.main.async {
 
-        alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
-            guard let string = alertController.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-                fatalError("Missing textField")
+            let alertController = UIAlertController(title: "Confirm or Adjust".localized(), message: "Suggested AASA URL:\n\(urlString)".localized(), preferredStyle: .alert)
+            alertController.addTextField { (textField) in
+                textField.text = urlString
+                textField.clearButtonMode = .always
+                textField.keyboardType = .URL
+
+                if #available(iOSApplicationExtension 10.0, *) {
+                    textField.textContentType = .URL
+                }
             }
 
-            if let userAASA = userAASA,
-                string == urlString {
-                self.dataStore.add(userAASA)
-                self.showDetailViewController(userAASA: userAASA)
-            } else {
-                guard let url = URL(string: string) else {
-                    // TODO: Present alert: URL is invalid
-                    return
+            alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
+                guard let string = alertController.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+                    fatalError("Missing textField")
                 }
 
-                AASAFetcher.fetch(url: url, completion: { (result) in
-                    switch result {
-                    case .value(let aasa):
-                        DispatchQueue.main.async {
-                            let userAASA = UserAASA(aasa: aasa, from: url)
-                            self.dataStore.add(userAASA)
-                            self.showDetailViewController(userAASA: userAASA)
-                        }
-                    case .error(let error):
-                        print(error.localizedDescription)
-                        // TODO: Present alert: AASA not found
+                if let userAASA = userAASA,
+                    string == urlString {
+                    self.dataStore.add(userAASA)
+                    self.showDetailViewController(userAASA: userAASA)
+                } else {
+                    guard let url = URL(string: string) else {
+                        // TODO: Present alert: URL is invalid
+                        return
                     }
-                })
-            }
-        }))
 
-        alertController.addAction(.cancelAction)
+                    AASAFetcher.fetch(url: url, completion: { (result) in
+                        switch result {
+                        case .value(let aasa):
+                            DispatchQueue.main.async {
+                                let userAASA = UserAASA(aasa: aasa, from: url)
+                                self.dataStore.add(userAASA)
+                                self.showDetailViewController(userAASA: userAASA)
+                            }
+                        case .error(let error):
+                            print(error.localizedDescription)
+                            // TODO: Present alert: AASA not found
+                        }
+                    })
+                }
+            }))
 
-        DispatchQueue.main.async {
+            alertController.addAction(.cancelAction)
             self.present(alertController, animated: true, completion: { })
         }
     }
 
     private func showDetailViewController(userAASA: UserAASA) {
-        let vc = DetailViewController(userAASA: userAASA)
-        vc.urlOpener = urlOpener
-        navigationController?.show(vc, sender: self)
+        DispatchQueue.main.async {
+            let vc = DetailViewController(userAASA: userAASA)
+            vc.urlOpener = self.urlOpener
+            self.navigationController?.show(vc, sender: self)
+        }
     }
 
     @objc func appWillResignActive() {

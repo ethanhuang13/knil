@@ -14,6 +14,7 @@ typealias Closure = () -> Void
 struct TableViewCellViewModel {
     let title: String
     let subtitle: String?
+    let image: UIImage?
     let reuseIdentifier: String
     let cellStyle: UITableViewCellStyle
     let selectionStyle: UITableViewCellSelectionStyle
@@ -25,6 +26,7 @@ struct TableViewCellViewModel {
 
     init(title: String,
          subtitle: String? = nil,
+         image: UIImage? = nil,
          cellStyle: UITableViewCellStyle = .default,
          selectionStyle: UITableViewCellSelectionStyle = .default,
          accessoryType: UITableViewCellAccessoryType = .disclosureIndicator,
@@ -35,6 +37,7 @@ struct TableViewCellViewModel {
         ) {
         self.title = title
         self.subtitle = subtitle
+        self.image = image
         self.cellStyle = cellStyle
         self.reuseIdentifier = String(cellStyle.rawValue)
         self.selectionStyle = selectionStyle
@@ -50,6 +53,18 @@ struct TableViewCellViewModel {
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = subtitle
         cell.detailTextLabel?.numberOfLines = 0
+
+        if let image = self.image {
+            cell.imageView?.image = image
+
+            let itemSize = CGSize(width: 44, height: 44)
+            UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.main.scale)
+            let imageRect = CGRect(origin: .zero, size: itemSize)
+            cell.imageView?.image?.draw(in: imageRect)
+            cell.imageView?.image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+
         cell.selectionStyle = selectionStyle
         cell.accessoryType = accessoryType
     }

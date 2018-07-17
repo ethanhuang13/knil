@@ -15,13 +15,14 @@ extension UserAASA {
     }
 
     var cellSubtitle: String {
-        let pairs: [(Int?, String)] =
-            [
-                (aasa.appLinks?.details.count, "%li App Links"),
-                (aasa.webCredentials?.appIDs.count, "%li Web Credentials"),
-                (aasa.activityContinuation?.appIDs.count, "%li Activity Continuation")
+        let pairs: [(Int?, String)] = [
+            (0, "🌎 \(url.absoluteString)"),
+            (userApps.count, "💡 %li App(s)"),
+            (aasa.appLinks?.details.count, "🔗 %li App Links"), // App Links
+            (aasa.activityContinuation?.appIDs.count, "🤝 %li Activity Continuation"), // Activity Continuation
+            (aasa.webCredentials?.appIDs.count, "🔐 %li Web Credentials") // Web Credentials
         ]
 
-        return url.absoluteString + "\n" + pairs.filter({ $0.0 != nil }).map ({ String(format: $0.1, $0.0!) }).joined(separator: ", ")
+        return pairs.filter({ $0.0 != nil }).map ({ String(format: $0.1, $0.0!) }).joined(separator: "\n")
     }
 }

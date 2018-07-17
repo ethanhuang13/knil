@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct AppID: Codable {
+public struct AppID: Codable, Hashable {
     public let teamID: String
     public let bundleID: String
 

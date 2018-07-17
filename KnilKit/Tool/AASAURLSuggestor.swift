@@ -15,8 +15,11 @@ public struct AASAURLSuggestor {
          facebook.com => facebook.com
          */
 
-        if string.range(of: ".") == nil {
-            return string + ".com"
+        if let url = URL(string: string),
+            let host = url.host {
+            return host
+        } else if string.range(of: ".") == nil {
+            return "www.\(string).com"
         } else {
             return string
         }
@@ -47,5 +50,13 @@ public struct AASAURLSuggestor {
                 completion(.error(error))
             }
         }
+    }
+
+    public static func suggestURLString(from string: String) -> String {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = suggestHostname(from: string)
+        urlComponents.path = "/apple-app-site-association"
+        return urlComponents.url?.absoluteString ?? string
     }
 }
