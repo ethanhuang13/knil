@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.3(3)] - 2018-07-31
+### Added
+- App icon
+- Theme color
+- Launch Storyboard
+- Bezier path mask for app icons
+
 ## [0.2(2)] - 2018-07-30
 ### Added
 - Deal with AASA redirection

@@ -142,13 +142,14 @@ public class ListViewController: UITableViewController {
                                     alertController.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { (_) in
                                         let userAASA = UserAASA(aasa: aasa, from: url)
                                         self.dataStore.upsert(userAASA)
+                                        self.dataStore.archive()
                                         self.showDetailViewController(userAASA: userAASA)
                                     }))
                                     self.present(alertController, animated: true, completion: { })
-
                                 } else {
                                     let userAASA = UserAASA(aasa: aasa, from: url)
                                     self.dataStore.upsert(userAASA)
+                                    self.dataStore.archive()
                                     self.showDetailViewController(userAASA: userAASA)
                                 }
 
@@ -188,5 +189,6 @@ extension ListViewController: UserDataStoreDelegate {
 extension ListViewController: DetailViewControllerDelegate {
     func update(_ userAASA: UserAASA) {
         self.dataStore.upsert(userAASA)
+        self.dataStore.archive()
     }
 }
