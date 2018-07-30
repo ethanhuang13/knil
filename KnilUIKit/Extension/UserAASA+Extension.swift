@@ -17,7 +17,7 @@ extension UserAASA {
     var cellSubtitle: String {
         let pairs: [(Int?, String)] = [
             (0, "🌎 \(url.absoluteString)"),
-            (userApps.count, "💡 %li App(s)"),
+            (userApps.count, "💡 %li App ID(s)"),
             (aasa.appLinks?.details.count, "🔗 %li App Links"), // App Links
             (aasa.activityContinuation?.appIDs.count, "🤝 %li Activity Continuation"), // Activity Continuation
             (aasa.webCredentials?.appIDs.count, "🔐 %li Web Credentials") // Web Credentials

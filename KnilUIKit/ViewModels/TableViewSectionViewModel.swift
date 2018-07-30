@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct TableViewSectionViewModel {
-    let header: String?
-    let footer: String?
-    let rows: [TableViewCellViewModel]
+public struct TableViewSectionViewModel {
+    public let header: String?
+    public let footer: String?
+    public let rows: [TableViewCellViewModel]
 }

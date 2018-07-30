@@ -39,7 +39,12 @@ extension AppPath {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = hostname
-        urlComponents.path = pathString
+
+        if pathString == "*" {
+            urlComponents.path = ""
+        } else {
+            urlComponents.path = pathString
+        }
         return urlComponents.url
     }
 }

@@ -19,7 +19,7 @@ public struct iTunesSearchAPI {
 
         url.performRequest { (result) in
             switch result {
-            case .value(let data):
+            case .value(let (data, _)):
                 do {
                     let appResults = try JSONDecoder().decode(iTunesAppResultsWrapper.self, from: data)
                     if let app = appResults.results.first {

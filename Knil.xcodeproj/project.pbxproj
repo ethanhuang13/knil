@@ -28,7 +28,6 @@
 		6C0D223020E0F75B00FBFA86 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */; };
 		6C3D007920FC9CF1007A567A /* UserAASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007820FC9CF1007A567A /* UserAASA.swift */; };
 		6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007B20FC9E00007A567A /* UserDataStore.swift */; };
-		6C3D007E20FCA505007A567A /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007D20FCA505007A567A /* MulticastDelegate.swift */; };
 		6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007F20FCBEA1007A567A /* URLOpener.swift */; };
 		6CA03A6D20FB1DC3004BA91D /* AASAURLSuggestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */; };
 		6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */; };
@@ -55,6 +54,14 @@
 		6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */; };
 		6CC52C1B20F6014700C7A5B0 /* AASAFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */; };
 		6CC52C1D20F60AD500C7A5B0 /* iTunesSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */; };
+		6CC82D2C21087AB900D13EF5 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D2B21087AB900D13EF5 /* UIAlertController+Extension.swift */; };
+		6CC82D31210EB11900D13EF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D30210EB11900D13EF5 /* SettingsViewController.swift */; };
+		6CC82D35210EB30900D13EF5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D34210EB30900D13EF5 /* TabBarController.swift */; };
+		6CC82D37210EB48100D13EF5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D36210EB48000D13EF5 /* UIColor+Extension.swift */; };
+		6CC82D39210EB56D00D13EF5 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D38210EB56D00D13EF5 /* UINavigationController+Extension.swift */; };
+		6CC82D40210EBE3A00D13EF5 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D3B210EBD0C00D13EF5 /* UserDefaults+Extension.swift */; };
+		6CC82D41210EBE6300D13EF5 /* AppStoreOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D3E210EBD9000D13EF5 /* AppStoreOption.swift */; };
+		6CC82D45210EEB3C00D13EF5 /* AASAURLSuggestorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D44210EEB3C00D13EF5 /* AASAURLSuggestorTests.swift */; };
 		6CD53D4B20F7149E002FF804 /* AASAValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D4A20F7149E002FF804 /* AASAValidator.swift */; };
 		6CD53D4D20F715E7002FF804 /* AASAValidatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D4C20F715E7002FF804 /* AASAValidatorError.swift */; };
 		6CD53D4F20F71A96002FF804 /* KnilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; };
@@ -62,7 +69,7 @@
 		6CD53D5520F71B6D002FF804 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */; };
 		6CEB657720FCEDCB008E0213 /* UserAASA+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */; };
 		6CEFF19720FDD1F30087BD79 /* UserAppID+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19620FDD1F30087BD79 /* UserAppID+Extension.swift */; };
-		6CEFF19920FDD42E0087BD79 /* UserAppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19820FDD42E0087BD79 /* UserAppID.swift */; };
+		6CEFF19920FDD42E0087BD79 /* UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19820FDD42E0087BD79 /* UserApp.swift */; };
 		6CEFF19D20FDF6D20087BD79 /* AppPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19C20FDF6D20087BD79 /* AppPath+Extension.swift */; };
 		6CEFF1A020FDFB0E0087BD79 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFF19F20FDFB0E0087BD79 /* LinkViewController.swift */; };
 /* End PBXBuildFile section */
@@ -158,7 +165,6 @@
 		6C0D223120E0F75B00FBFA86 /* ActionExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActionExtension-Info.plist"; sourceTree = "<group>"; };
 		6C3D007820FC9CF1007A567A /* UserAASA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAASA.swift; sourceTree = "<group>"; };
 		6C3D007B20FC9E00007A567A /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
-		6C3D007D20FCA505007A567A /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		6C3D007F20FCBEA1007A567A /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAURLSuggestor.swift; sourceTree = "<group>"; };
 		6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -182,13 +188,21 @@
 		6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAFetcherTests.swift; sourceTree = "<group>"; };
 		6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAPITests.swift; sourceTree = "<group>"; };
+		6CC82D2B21087AB900D13EF5 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		6CC82D30210EB11900D13EF5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6CC82D34210EB30900D13EF5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6CC82D36210EB48000D13EF5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6CC82D38210EB56D00D13EF5 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		6CC82D3B210EBD0C00D13EF5 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		6CC82D3E210EBD9000D13EF5 /* AppStoreOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreOption.swift; sourceTree = "<group>"; };
+		6CC82D44210EEB3C00D13EF5 /* AASAURLSuggestorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAURLSuggestorTests.swift; sourceTree = "<group>"; };
 		6CD53D4A20F7149E002FF804 /* AASAValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAValidator.swift; sourceTree = "<group>"; };
 		6CD53D4C20F715E7002FF804 /* AASAValidatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAValidatorError.swift; sourceTree = "<group>"; };
 		6CD53D5120F71AAC002FF804 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
 		6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAASA+Extension.swift"; sourceTree = "<group>"; };
 		6CEFF19620FDD1F30087BD79 /* UserAppID+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAppID+Extension.swift"; sourceTree = "<group>"; };
-		6CEFF19820FDD42E0087BD79 /* UserAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAppID.swift; sourceTree = "<group>"; };
+		6CEFF19820FDD42E0087BD79 /* UserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApp.swift; sourceTree = "<group>"; };
 		6CEFF19C20FDF6D20087BD79 /* AppPath+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppPath+Extension.swift"; sourceTree = "<group>"; };
 		6CEFF19F20FDFB0E0087BD79 /* LinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,10 +290,10 @@
 		6C0D219120E0F2A700FBFA86 /* Knil */ = {
 			isa = PBXGroup;
 			children = (
-				6C0D219220E0F2A700FBFA86 /* AppDelegate.swift */,
-				6C0D219920E0F2A800FBFA86 /* Assets.xcassets */,
-				6C0D219B20E0F2A800FBFA86 /* LaunchScreen.storyboard */,
-				6C0D219E20E0F2A800FBFA86 /* Knil-Info.plist */,
+				6CC82D3A210EBD0000D13EF5 /* Extension */,
+				6CC82D32210EB2BD00D13EF5 /* App */,
+				6CC82D2F210EB10700D13EF5 /* Settings */,
+				6CC82D33210EB2CF00D13EF5 /* Resources */,
 			);
 			path = Knil;
 			sourceTree = "<group>";
@@ -298,6 +312,7 @@
 				6CC52BDE20F4A9A300C7A5B0 /* Errors.swift */,
 				6CD53D4C20F715E7002FF804 /* AASAValidatorError.swift */,
 				6CC52C1420F5ED6600C7A5B0 /* Result.swift */,
+				6CC82D3E210EBD9000D13EF5 /* AppStoreOption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +370,7 @@
 			children = (
 				6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */,
 				6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */,
+				6CC82D44210EEB3C00D13EF5 /* AASAURLSuggestorTests.swift */,
 				6C0D221120E0F6B900FBFA86 /* KnilKitTests-Info.plist */,
 				6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */,
 				6CC52C0D20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA */,
@@ -383,7 +399,7 @@
 			children = (
 				6C3D007B20FC9E00007A567A /* UserDataStore.swift */,
 				6C3D007820FC9CF1007A567A /* UserAASA.swift */,
-				6CEFF19820FDD42E0087BD79 /* UserAppID.swift */,
+				6CEFF19820FDD42E0087BD79 /* UserApp.swift */,
 			);
 			path = UserData;
 			sourceTree = "<group>";
@@ -392,7 +408,6 @@
 			isa = PBXGroup;
 			children = (
 				6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */,
-				6C3D007D20FCA505007A567A /* MulticastDelegate.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -418,9 +433,42 @@
 			children = (
 				6C0D21C120E0F2DC00FBFA86 /* AASAFetcher.swift */,
 				6CC52C1620F5F38700C7A5B0 /* iTunesSearchAPI.swift */,
-				6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		6CC82D2F210EB10700D13EF5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6CC82D30210EB11900D13EF5 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6CC82D32210EB2BD00D13EF5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D219220E0F2A700FBFA86 /* AppDelegate.swift */,
+				6CC82D34210EB30900D13EF5 /* TabBarController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6CC82D33210EB2CF00D13EF5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D219920E0F2A800FBFA86 /* Assets.xcassets */,
+				6C0D219B20E0F2A800FBFA86 /* LaunchScreen.storyboard */,
+				6C0D219E20E0F2A800FBFA86 /* Knil-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6CC82D3A210EBD0000D13EF5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		6CD53D4E20F71A96002FF804 /* Frameworks */ = {
@@ -434,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				6CD53D5120F71AAC002FF804 /* String+Extension.swift */,
+				6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -442,9 +491,13 @@
 			isa = PBXGroup;
 			children = (
 				6CD53D5420F71B6D002FF804 /* UIAlertAction+Extension.swift */,
+				6CC82D36210EB48000D13EF5 /* UIColor+Extension.swift */,
+				6CC82D2B21087AB900D13EF5 /* UIAlertController+Extension.swift */,
 				6CEB657620FCEDCB008E0213 /* UserAASA+Extension.swift */,
 				6CEFF19C20FDF6D20087BD79 /* AppPath+Extension.swift */,
 				6CEFF19620FDD1F30087BD79 /* UserAppID+Extension.swift */,
+				6CC82D38210EB56D00D13EF5 /* UINavigationController+Extension.swift */,
+				6CC82D3B210EBD0C00D13EF5 /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -703,7 +756,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC82D35210EB30900D13EF5 /* TabBarController.swift in Sources */,
 				6C0D219320E0F2A700FBFA86 /* AppDelegate.swift in Sources */,
+				6CC82D31210EB11900D13EF5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,10 +772,14 @@
 				6CD53D5520F71B6D002FF804 /* UIAlertAction+Extension.swift in Sources */,
 				6CEFF19D20FDF6D20087BD79 /* AppPath+Extension.swift in Sources */,
 				6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */,
+				6CC82D2C21087AB900D13EF5 /* UIAlertController+Extension.swift in Sources */,
 				6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */,
 				6CEB657720FCEDCB008E0213 /* UserAASA+Extension.swift in Sources */,
 				6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */,
+				6CC82D37210EB48100D13EF5 /* UIColor+Extension.swift in Sources */,
+				6CC82D39210EB56D00D13EF5 /* UINavigationController+Extension.swift in Sources */,
 				6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */,
+				6CC82D40210EBE3A00D13EF5 /* UserDefaults+Extension.swift in Sources */,
 				6CEFF1A020FDFB0E0087BD79 /* LinkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC82D41210EBE6300D13EF5 /* AppStoreOption.swift in Sources */,
 				6CC52BD720F4A2BA00C7A5B0 /* AppID.swift in Sources */,
 				6CC52BE620F4AC1E00C7A5B0 /* AppLinks.swift in Sources */,
 				6CC52BF020F4C6EB00C7A5B0 /* AppIDsWrapper.swift in Sources */,
@@ -749,10 +809,9 @@
 				6CD53D4D20F715E7002FF804 /* AASAValidatorError.swift in Sources */,
 				6CD53D4B20F7149E002FF804 /* AASAValidator.swift in Sources */,
 				6CC52BDB20F4A4A100C7A5B0 /* AppPath.swift in Sources */,
-				6C3D007E20FCA505007A567A /* MulticastDelegate.swift in Sources */,
 				6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */,
 				6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */,
-				6CEFF19920FDD42E0087BD79 /* UserAppID.swift in Sources */,
+				6CEFF19920FDD42E0087BD79 /* UserApp.swift in Sources */,
 				6CC52C1720F5F38700C7A5B0 /* iTunesSearchAPI.swift in Sources */,
 				6CC52BDF20F4A9A300C7A5B0 /* Errors.swift in Sources */,
 				6CD53D5220F71AAC002FF804 /* String+Extension.swift in Sources */,
@@ -769,6 +828,7 @@
 				6CC52C1D20F60AD500C7A5B0 /* iTunesSearchAPITests.swift in Sources */,
 				6CC52BDD20F4A4B500C7A5B0 /* AppPathTests.swift in Sources */,
 				6CC52BEC20F4C0DD00C7A5B0 /* AASATests.swift in Sources */,
+				6CC82D45210EEB3C00D13EF5 /* AASAURLSuggestorTests.swift in Sources */,
 				6CC52BE820F4ADC200C7A5B0 /* AppLinksTests.swift in Sources */,
 				6CC52C1B20F6014700C7A5B0 /* AASAFetcherTests.swift in Sources */,
 			);
@@ -958,7 +1018,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SE9N6X5V7C;
-				INFOPLIST_FILE = "$(SRCROOT)/Knil/Knil-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Knil/Resources/Knil-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -977,7 +1037,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SE9N6X5V7C;
-				INFOPLIST_FILE = "$(SRCROOT)/Knil/Knil-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Knil/Resources/Knil-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,9 +12,9 @@ import KnilKit
 class LinkViewController: UITableViewController {
     public var urlOpener: URLOpener?
     private lazy var viewModel: TableViewViewModel = { TableViewViewModel(tableViewController: self) }()
-    private let userApp: UserAppID
+    private let userApp: UserApp
 
-    init(userApp: UserAppID) {
+    init(userApp: UserApp) {
         self.userApp = userApp
         super.init(style: .grouped)
     }
@@ -26,13 +26,20 @@ class LinkViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.barTintColor = .barTint
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.tint]
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.tint]
+        }
+
         reloadData()
     }
 
     private func reloadData() {
         DispatchQueue.main.async {
             if let rows = self.userApp.paths?.map({ $0.cellViewModel(hostname: self.userApp.hostname, urlOpener: self.urlOpener) }) {
-                let section = TableViewSectionViewModel(header: "Test Universal Link", footer: "Make sure you have the app installed. Tap each path to test, swipe left to edit.", rows: rows)
+                let section = TableViewSectionViewModel(header: "Universal Link", footer: "Make sure you have the app installed. Tap each path to test, swipe left to edit.", rows: rows)
                 self.viewModel.sections = [section]
             }
 

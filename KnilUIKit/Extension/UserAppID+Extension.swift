@@ -9,7 +9,7 @@
 import Foundation
 import KnilKit
 
-extension UserAppID {
+extension UserApp {
     var cellTitle: String {
         return appID.bundleID
     }
@@ -29,7 +29,7 @@ extension UserAppID {
         fetchApp { (result) in
             switch result {
             case .value(let app):
-                UserAppID.fetchIcon(url: app.iconURL, completion: { (result) in
+                UserApp.fetchIcon(url: app.iconURL, completion: { (result) in
                     switch result {
                     case .value(let image):
                         self.icon = image

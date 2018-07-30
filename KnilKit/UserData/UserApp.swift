@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class UserAppID: Codable {
+public class UserApp: Codable {
     public let hostname: String
     public let appID: AppID
 
@@ -19,7 +19,6 @@ public class UserAppID: Codable {
 
     public var app: iTunesApp?
     public var icon: UIImage?
-    public var customPaths: [AppPath]?
 
     public enum CodingKeys: String, CodingKey {
         case hostname
@@ -38,5 +37,16 @@ public class UserAppID: Codable {
         supportsAppLinks = aasa.appLinks?.details.filter { $0.appID == appID }.first != nil
         supportsWebCredentials = aasa.webCredentials?.appIDs.contains(appID) == true
         supportsActivityContinuation = aasa.activityContinuation?.appIDs.contains(appID) == true
+    }
+
+    internal func update(paths: [AppPath]?,
+                         supportsAppLinks: Bool,
+                         supportsWebCredentials: Bool,
+                         supportsActivityContinuation: Bool) {
+        print("UserApp \(self.appID) updated paths...")
+        self.paths = paths
+        self.supportsAppLinks = supportsAppLinks
+        self.supportsWebCredentials = supportsWebCredentials
+        self.supportsActivityContinuation = supportsActivityContinuation
     }
 }

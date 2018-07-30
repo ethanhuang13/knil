@@ -9,7 +9,7 @@
 import Foundation
 
 public struct AASAFetcher {
-    public static func fetch(host: String, completion: @escaping (Result<AASA>) -> Void) {
+    public static func fetch(host: String, completion: @escaping (Result<(AASA, URL)>) -> Void) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = host
@@ -23,13 +23,15 @@ public struct AASAFetcher {
         fetch(url: url, completion: completion)
     }
 
-    public static func fetch(url: URL, completion: @escaping (Result<AASA>) -> Void) {
+    /// Will return AASA and Redirected(if occurred) URL
+
+    public static func fetch(url: URL, completion: @escaping (Result<(AASA, URL)>) -> Void) {
         url.performRequest { (result) in
             switch result {
-            case .value(let data):
+            case .value(let (data, url)):
                 do {
                     let aasa = try AASA(data: data)
-                    completion(.value(aasa))
+                    completion(.value((aasa, url)))
                 } catch {
                     completion(.error(error))
                 }

@@ -11,7 +11,7 @@ import UIKit
 typealias UIViewControllerClosure = () -> UIViewController?
 typealias Closure = () -> Void
 
-struct TableViewCellViewModel {
+public struct TableViewCellViewModel {
     let title: String
     let subtitle: String?
     let image: UIImage?
@@ -19,9 +19,7 @@ struct TableViewCellViewModel {
     let cellStyle: UITableViewCellStyle
     let selectionStyle: UITableViewCellSelectionStyle
     let accessoryType: UITableViewCellAccessoryType
-//    var leadingSwipeActions: UISwipeActionsConfiguration?
-//    var trailingSwipeActions: UISwipeActionsConfiguration?
-    var previewingViewController: UIViewControllerClosure?
+    let editActions: [UITableViewRowAction]
     var selectAction: Closure
 
     init(title: String,
@@ -30,9 +28,7 @@ struct TableViewCellViewModel {
          cellStyle: UITableViewCellStyle = .default,
          selectionStyle: UITableViewCellSelectionStyle = .default,
          accessoryType: UITableViewCellAccessoryType = .disclosureIndicator,
-//         leadingSwipeActions: UISwipeActionsConfiguration? = nil,
-//         trailingSwipeActions: UISwipeActionsConfiguration? = nil,
-         previewingViewController: UIViewControllerClosure? = nil,
+         editActions: [UITableViewRowAction] = [],
          selectAction: @escaping Closure = {}
         ) {
         self.title = title
@@ -42,9 +38,7 @@ struct TableViewCellViewModel {
         self.reuseIdentifier = String(cellStyle.rawValue)
         self.selectionStyle = selectionStyle
         self.accessoryType = accessoryType
-//        self.leadingSwipeActions = leadingSwipeActions
-//        self.trailingSwipeActions = trailingSwipeActions
-        self.previewingViewController = previewingViewController
+        self.editActions = editActions
         self.selectAction = selectAction
     }
 

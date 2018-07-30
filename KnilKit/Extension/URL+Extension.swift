@@ -9,7 +9,7 @@
 import Foundation
 
 extension URL {
-    func performRequest(completion: @escaping (_ result: Result<Data>) -> Void) {
+    func performRequest(completion: @escaping (_ result: Result<(Data, URL)>) -> Void) {
         let request = URLRequest(url: self)
 
         URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -18,12 +18,13 @@ extension URL {
                 return
             }
 
-            guard let data = data else {
+            guard let data = data,
+                let url = (response as? HTTPURLResponse)?.url else {
                 completion(.error(KnilKitError.noData))
                 return
             }
 
-            completion(.value(data))
+            completion(.value((data, url)))
             }.resume()
     }
 }

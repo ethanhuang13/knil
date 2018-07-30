@@ -51,11 +51,20 @@ public class UserDataStore {
         }
     }
 
-    public func add(_ userAASA: UserAASA) {
-        userAASAs[userAASA.hostname] = userAASA
+    public func upsert(_ userAASA: UserAASA) {
+        if let existUserAASA = userAASAs[userAASA.hostname] {
+            existUserAASA.update(userAASA.aasa)
+            notifyDidUpdate()
+        } else {
+            userAASAs[userAASA.hostname] = userAASA
+        }
     }
 
-    public func list(sortedBy option: AASASortOption = .fetchedDate) -> [UserAASA] {
+    public func remove(_ userAASA: UserAASA) {
+        userAASAs[userAASA.hostname] = nil
+    }
+
+    public func list(sortedBy option: AASASortOption) -> [UserAASA] {
         switch option {
         case .hostname:
             return userAASAs.values.sorted {

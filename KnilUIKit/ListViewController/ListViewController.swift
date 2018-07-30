@@ -28,6 +28,15 @@ public class ListViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
+
+        navigationController?.navigationBar.barTintColor = .barTint
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.tint]
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.tint]
+        }
+        navigationItem.title = "AASA".localized()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddingAASAAlertController))
 
         NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive), name: .UIApplicationWillResignActive, object: nil)
@@ -37,12 +46,24 @@ public class ListViewController: UITableViewController {
 
     private func reloadData() {
         DispatchQueue.main.async {
-            let rows = self.dataStore.list().map { userAASA in
-                return TableViewCellViewModel(title: userAASA.cellTitle, subtitle: userAASA.cellSubtitle, cellStyle: .subtitle, selectionStyle: .default, accessoryType: .disclosureIndicator, previewingViewController: nil, selectAction: {
+            let emptyRow = TableViewCellViewModel(title: "Tap here to download", subtitle: "apple-app-site-association file", cellStyle: .subtitle, selectAction: {
+                self.presentAddingAASAAlertController()
+            })
+            let rows: [TableViewCellViewModel] = self.dataStore.list(sortedBy: .hostname).map { userAASA in
+                let removeAction = UITableViewRowAction(style: .destructive, title: "Remove".localized(), handler: { (_, _) in
+                    DispatchQueue.main.async {
+                        self.dataStore.remove(userAASA)
+                        self.reloadData()
+                    }
+                })
+
+                let row = TableViewCellViewModel(title: userAASA.cellTitle, subtitle: userAASA.cellSubtitle, cellStyle: .subtitle, selectionStyle: .default, accessoryType: .disclosureIndicator, editActions: [removeAction], selectAction: {
                     self.showDetailViewController(userAASA: userAASA)
                 })
+                return row
             }
-            let section = TableViewSectionViewModel(header: nil, footer: nil, rows: rows)
+
+            let section = TableViewSectionViewModel(header: nil, footer: nil, rows: rows.isEmpty ? [emptyRow] : rows)
             self.viewModel.sections = [section]
             self.tableView.reloadData()
         }
@@ -50,10 +71,9 @@ public class ListViewController: UITableViewController {
 
     @objc private func presentAddingAASAAlertController() {
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: "Enter hostname or URL".localized(), message: "", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Enter Hostname".localized(), message: "If you enter a hostname, Knil will fetch its /apple-app-site-association.\n\nOr just enter a company name like twitter, fb, or netflix.", preferredStyle: .alert)
             alertController.addTextField { (textField) in
-                textField.placeholder = "e.g. twitter.com".localized()
-                //            textField.text = "twitter.com"
+                textField.placeholder = "www.company.com/apple-app-site-association"
                 textField.clearButtonMode = .always
                 textField.keyboardType = .URL
 
@@ -61,7 +81,7 @@ public class ListViewController: UITableViewController {
                     textField.textContentType = .URL
                 }
             }
-            alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
+            alertController.addAction(UIAlertAction(title: "I'm Feeling Lucky".localized(), style: .default, handler: { (_) in
                 guard let string = alertController.textFields?.first?.text else {
                     fatalError("Missing textField")
                 }
@@ -69,10 +89,11 @@ public class ListViewController: UITableViewController {
                 AASAURLSuggestor.suggestAASA(from: string, completion: { (result) in
                     switch result {
                     case .value(let userAASA):
-                        self.presentConfirmURLAlertController(urlString: userAASA.url.absoluteString, suggested: userAASA)
+                        self.dataStore.upsert(userAASA)
+                        self.showDetailViewController(userAASA: userAASA)
                     case .error(let error):
                         print(error.localizedDescription)
-                        self.presentConfirmURLAlertController(urlString: AASAURLSuggestor.suggestURLString(from: string))
+                        self.presentConfirmURLAlertController(urlString: AASAURLSuggestor.suggestURL(from: string)?.absoluteString ?? string)
                     }
                 })
             }))
@@ -81,7 +102,7 @@ public class ListViewController: UITableViewController {
         }
     }
 
-    private func presentConfirmURLAlertController(urlString: String, suggested userAASA: UserAASA? = nil) {
+    private func presentConfirmURLAlertController(urlString: String, suggesting userAASA: UserAASA? = nil) {
         DispatchQueue.main.async {
 
             let alertController = UIAlertController(title: "Confirm or Adjust".localized(), message: "Suggested AASA URL:\n\(urlString)".localized(), preferredStyle: .alert)
@@ -102,25 +123,38 @@ public class ListViewController: UITableViewController {
 
                 if let userAASA = userAASA,
                     string == urlString {
-                    self.dataStore.add(userAASA)
+                    self.dataStore.upsert(userAASA)
                     self.showDetailViewController(userAASA: userAASA)
                 } else {
                     guard let url = URL(string: string) else {
-                        // TODO: Present alert: URL is invalid
+                        self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: "URL invalid.".localized()), animated: true, completion: nil)
                         return
                     }
 
                     AASAFetcher.fetch(url: url, completion: { (result) in
-                        switch result {
-                        case .value(let aasa):
-                            DispatchQueue.main.async {
-                                let userAASA = UserAASA(aasa: aasa, from: url)
-                                self.dataStore.add(userAASA)
-                                self.showDetailViewController(userAASA: userAASA)
+                        DispatchQueue.main.async {
+                            switch result {
+                            case .value(let (aasa, redirectURL)):
+                                if url.absoluteString != redirectURL.absoluteString {
+                                    let message = String(format: "Redirected to %@.".localized(), redirectURL.absoluteString)
+
+                                    let alertController = UIAlertController(title: "Redirection Occurred".localized(), message: message, preferredStyle: .alert)
+                                    alertController.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { (_) in
+                                        let userAASA = UserAASA(aasa: aasa, from: url)
+                                        self.dataStore.upsert(userAASA)
+                                        self.showDetailViewController(userAASA: userAASA)
+                                    }))
+                                    self.present(alertController, animated: true, completion: { })
+
+                                } else {
+                                    let userAASA = UserAASA(aasa: aasa, from: url)
+                                    self.dataStore.upsert(userAASA)
+                                    self.showDetailViewController(userAASA: userAASA)
+                                }
+
+                            case .error(let error):
+                                self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: error.localizedDescription), animated: true, completion: nil)
                             }
-                        case .error(let error):
-                            print(error.localizedDescription)
-                            // TODO: Present alert: AASA not found
                         }
                     })
                 }
@@ -135,6 +169,7 @@ public class ListViewController: UITableViewController {
         DispatchQueue.main.async {
             let vc = DetailViewController(userAASA: userAASA)
             vc.urlOpener = self.urlOpener
+            vc.delegate = self
             self.navigationController?.show(vc, sender: self)
         }
     }
@@ -147,5 +182,11 @@ public class ListViewController: UITableViewController {
 extension ListViewController: UserDataStoreDelegate {
     public func aasaListDidUpdate() {
         self.reloadData()
+    }
+}
+
+extension ListViewController: DetailViewControllerDelegate {
+    func update(_ userAASA: UserAASA) {
+        self.dataStore.upsert(userAASA)
     }
 }

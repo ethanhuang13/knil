@@ -11,15 +11,21 @@ import KnilKit
 import StoreKit
 import SafariServices
 
+protocol DetailViewControllerDelegate: class {
+    func update(_ userAASA: UserAASA)
+}
+
 /// AASA Detail
 class DetailViewController: UITableViewController {
     public var urlOpener: URLOpener?
+    internal weak var delegate: DetailViewControllerDelegate?
     private lazy var viewModel: TableViewViewModel = { TableViewViewModel(tableViewController: self) }()
-    private let userAASA: UserAASA
+    private var userAASA: UserAASA
 
     init(userAASA: UserAASA) {
         self.userAASA = userAASA
         super.init(style: .grouped)
+        hidesBottomBarWhenPushed = true
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -41,7 +47,12 @@ class DetailViewController: UITableViewController {
 
         reloadData()
 
-        //        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddingAASAAlertController)) // TODO: Adds custom paths
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddingCustomURLAlertController))
+    }
+
+    private func update(_ userAASA: UserAASA) {
+        self.userAASA = userAASA
+        reloadData()
     }
 
     private func reloadData() {
@@ -50,17 +61,55 @@ class DetailViewController: UITableViewController {
             var sections: [TableViewSectionViewModel] = []
 
             // Title section
-            let titleRow = TableViewCellViewModel(title: userAASA.cellTitle, subtitle: userAASA.cellSubtitle, cellStyle: .subtitle, selectionStyle: .default, accessoryType: .disclosureIndicator, previewingViewController: nil, selectAction: { })
-            let searchAPIValidationRow = TableViewCellViewModel(title: "Open in App Search API Validation Tool", subtitle: "Tap here will copy an URL and open a webpage of Apple. You need to paste the URL to test.", cellStyle: .subtitle, previewingViewController: nil, selectAction: {
-                self.openInSearchAPIValidation(hostname: userAASA.hostname)
+            let titleRow = TableViewCellViewModel(title: userAASA.cellTitle, subtitle: userAASA.cellSubtitle, cellStyle: .subtitle, selectionStyle: .none, accessoryType: .none, selectAction: { })
+            let aasaActionsRow = TableViewCellViewModel(title: "Actions".localized(), subtitle: "Open in other tools, see raw file, or reload.".localized(), cellStyle: .subtitle, selectAction: {
+                let alertController = UIAlertController(title: userAASA.url.absoluteString, message: nil, preferredStyle: .actionSheet)
+
+                alertController.addAction(UIAlertAction(title: "Open App Search API Validation Tool".localized(), style: .default, handler: { (_) in
+                    self.openInSearchAPIValidation(hostname: userAASA.hostname)
+                }))
+                alertController.addAction(UIAlertAction(title: "Open in AASA Validator".localized(), style: .default, handler: { (_) in
+                    self.openInAASAValidator(hostname: userAASA.hostname)
+                }))
+                alertController.addAction(UIAlertAction(title: "See Raw File in the Browser".localized(), style: .default, handler: { (_) in
+                    self.seeRaw()
+                }))
+                alertController.addAction(UIAlertAction(title: "Reload".localized(), style: .default, handler: { (_) in
+                    self.reloadAASA()
+                }))
+
+                alertController.addAction(.cancelAction)
+                self.present(alertController, animated: true, completion: { })
             })
-            let aasaValidatorRow = TableViewCellViewModel(title: "Open in AASA Validator", subtitle: "Tap here will open a webpage of Branch.io.", cellStyle: .subtitle, previewingViewController: nil, selectAction: {
-                self.openInAASAValidator(hostname: userAASA.hostname)
-            })
-            let titleSection = TableViewSectionViewModel(header: "apple-app-site-association file", footer: nil, rows: [titleRow, searchAPIValidationRow, aasaValidatorRow])
+
+            let titleSection = TableViewSectionViewModel(header: "apple-app-site-association file".localized(), footer: nil, rows: [titleRow, aasaActionsRow])
             sections.append(titleSection)
 
+            // Custom URLs
+            let emptyRow = TableViewCellViewModel(title: "Add Link".localized(), selectAction: {
+                self.presentAddingCustomURLAlertController()
+            })
+            let customLinkRows: [TableViewCellViewModel] = userAASA.customURLs.map { url in
+                let removeAction = UITableViewRowAction(style: .destructive, title: "Remove".localized(), handler: { (_, _) in
+                    DispatchQueue.main.async {
+                        if let index = userAASA.customURLs.index(of: url) {
+                            userAASA.customURLs.remove(at: index)
+                            self.reloadData()
+                        }
+                    }
+                })
+
+                return TableViewCellViewModel(title: url.relativePath, editActions: [removeAction], selectAction: {
+                    _ = self.urlOpener?.openURL(url)
+                })
+            }
+            let customLinksSection = TableViewSectionViewModel(header: "Custom Links".localized(), footer: "Add custom links for Universal Link testing.".localized(), rows: customLinkRows.isEmpty ? [emptyRow] : customLinkRows)
+
+            sections.append(customLinksSection)
+
+            /*
             let hasOnlyOneApp = userAASA.userApps.count == 1
+             */
 
             // Sections for each AppID
             self.userAASA.userApps.forEach { userAppID in
@@ -68,19 +117,19 @@ class DetailViewController: UITableViewController {
 
                 if let app = userAppID.app,
                     let icon = userAppID.icon {
-                    let appRow = TableViewCellViewModel(title: app.appName, image: icon, cellStyle: .default, previewingViewController: nil, selectAction: {
+                    let appRow = TableViewCellViewModel(title: app.appName, image: icon, cellStyle: .default, selectAction: {
                         self.download(userAppID.appID)
                     })
 
                     rows.append(appRow)
                 }
 
-                let appIDRow = TableViewCellViewModel(title: userAppID.cellTitle, subtitle: userAppID.cellSubtitle, cellStyle: .subtitle, selectionStyle: .none, accessoryType: .none, previewingViewController: nil, selectAction: { })
+                let appIDRow = TableViewCellViewModel(title: userAppID.cellTitle, subtitle: userAppID.cellSubtitle, cellStyle: .subtitle, selectionStyle: .none, accessoryType: .none, selectAction: { })
                 rows.append(appIDRow)
 
-                if hasOnlyOneApp == false,
+                if //hasOnlyOneApp == false,
                     userAppID.supportsAppLinks {
-                    let row = TableViewCellViewModel(title: "Test Universal Link", previewingViewController: nil, selectAction: {
+                    let row = TableViewCellViewModel(title: "Universal Link".localized(), selectAction: {
                         self.showLinkViewController(userApp: userAppID)
                     })
                     rows.append(row)
@@ -90,13 +139,15 @@ class DetailViewController: UITableViewController {
                 sections.append(section)
             }
 
+            /*
             // If only one app and supports Universal Link, list
             if hasOnlyOneApp,
                 let appPaths = userAASA.userApps.first?.paths {
                 let rows = appPaths.map { $0.cellViewModel(hostname: userAASA.hostname, urlOpener: self.urlOpener) }
-                let section = TableViewSectionViewModel(header: "Test Universal Link", footer: "Make sure you have the app installed. Tap each path to test, swipe left to edit.", rows: rows)
+                let section = TableViewSectionViewModel(header: "Universal Link", footer: "Make sure you have the app installed. Tap each path to test, swipe left to edit.", rows: rows)
                 sections.append(section)
             }
+             */
 
             self.navigationItem.title = self.userAASA.hostname
 
@@ -105,12 +156,48 @@ class DetailViewController: UITableViewController {
         }
     }
 
+    @objc private func presentAddingCustomURLAlertController() {
+        // TODO: Upgrade to a full function URL builder.
+        /*
+         Inlcuding:
+         - path
+         - parameter-value pairs
+         */
+
+        let alertController = UIAlertController(title: "Add Universal Link Test".localized(), message: "Type in a path and parameters for \(userAASA.hostname)", preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.text = "/"
+            textField.placeholder = "/path/"
+            textField.clearButtonMode = .always
+        }
+
+        alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
+            guard let string = alertController.textFields?.first?.text else {
+                fatalError("Missing textField")
+            }
+
+            guard var urlComponents = URLComponents(url: self.userAASA.url, resolvingAgainstBaseURL: false) else {
+                return
+            }
+
+            urlComponents.path = string
+
+            if let url = urlComponents.url {
+                self.userAASA.customURLs.append(url)
+                self.reloadData()
+            }
+        }))
+        alertController.addAction(.cancelAction)
+        present(alertController, animated: true, completion: { })
+    }
+
     private func download(_ appID: AppID) {
         iTunesSearchAPI.searchApp(bundleID: appID.bundleID, completion: { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .value(let app):
-                    if let urlOpener = self.urlOpener {
+                    if UserDefaults.standard.appStoreOption == .appStore,
+                        let urlOpener = self.urlOpener {
                         _ = urlOpener.openURL(app.appStoreURL)
                     } else {
                         let vc = SKStoreProductViewController()
@@ -134,17 +221,25 @@ class DetailViewController: UITableViewController {
 
     private func openInSearchAPIValidation(hostname: String) {
         DispatchQueue.main.async {
-            UIPasteboard.general.string = hostname
-            let url = URL(string: "https://search.developer.apple.com/appsearch-validation-tool")!
+            let alertController = UIAlertController(title: "App Search Validation Tool", message: "You will need to paste the URL yourself.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
+                UIPasteboard.general.string = hostname
+                let url = URL(string: "https://search.developer.apple.com/appsearch-validation-tool")!
 
-            if let urlOpener = self.urlOpener {
-                _ = urlOpener.openURL(url)
-            } else {
-                let sfvc = SFSafariViewController(url: url)
-                //            sfvc.preferredBarTintColor = .barTintColor
-                //            sfvc.preferredControlTintColor = .tintColor
-                self.present(sfvc, animated: true, completion: { })
-            }
+                if let urlOpener = self.urlOpener {
+                    _ = urlOpener.openURL(url)
+                } else {
+                    let sfvc = SFSafariViewController(url: url)
+                    if #available(iOSApplicationExtension 10.0, *) {
+                        sfvc.preferredBarTintColor = .barTint
+                        sfvc.preferredControlTintColor = .tint
+                    }
+                    self.present(sfvc, animated: true, completion: { })
+                }
+            }))
+
+            alertController.addAction(.cancelAction)
+            self.present(alertController, animated: true, completion: { })
         }
     }
 
@@ -156,19 +251,53 @@ class DetailViewController: UITableViewController {
                 _ = urlOpener.openURL(url)
             } else {
                 let sfvc = SFSafariViewController(url: url)
-                //            sfvc.preferredBarTintColor = .barTintColor
-                //            sfvc.preferredControlTintColor = .tintColor
+                if #available(iOSApplicationExtension 10.0, *) {
+                    sfvc.preferredBarTintColor = .barTint
+                    sfvc.preferredControlTintColor = .tint
+                }
                 self.present(sfvc, animated: true, completion: { })
             }
         }
     }
 
-    private func showLinkViewController(userApp: UserAppID) {
+    private func showLinkViewController(userApp: UserApp) {
         DispatchQueue.main.async {
             let vc = LinkViewController(userApp: userApp)
             vc.urlOpener = self.urlOpener
             self.navigationController?.show(vc, sender: self)
         }
+    }
+
+    private func seeRaw() {
+        let sfvc = SFSafariViewController(url: userAASA.url)
+        self.present(sfvc, animated: true, completion: { })
+    }
+
+    private func reloadAASA() {
+        let url = userAASA.url
+        AASAFetcher.fetch(url: url, completion: { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .value(let (aasa, _)):
+                    self.userAASA.update(aasa)
+                    self.delegate?.update(self.userAASA)
+                    self.present(UIAlertController.okAlertController(title: "Done".localized(), message: ""), animated: true, completion: nil)
+
+                    let group = DispatchGroup()
+                    self.userAASA.userApps.forEach {
+                        group.enter()
+                        $0.fetchAll(completion: { (_) in
+                            group.leave()
+                        })}
+                    group.notify(queue: .main, execute: {
+                        self.reloadData()
+                    })
+
+                case .error(let error):
+                    self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: error.localizedDescription), animated: true, completion: nil)
+                }
+            }
+        })
     }
 }
 

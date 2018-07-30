@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2(2)] - 2018-07-30
+### Added
+- Deal with AASA redirection
+- AASAURLSuggestor tests
+- TabBar
+- Update AASA
+- AASA actions
+- Simple custom links
+- List empty state
+- Detail empty state
+
 ## [0.1(1)] - 2018-07-17
 ### Added
 - AASA data model and fetcher
