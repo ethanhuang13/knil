@@ -39,9 +39,31 @@ class SettingsViewController: UITableViewController {
 //                    self.linksSection,
 //                 self.viewSection,
 //                 self.dataSection,
-//                 self.aboutSection
+                 self.aboutSection
             ]
             self.tableView.reloadData()
         }
+    }
+
+    private var aboutSection: TableViewSectionViewModel {
+        let rateCellViewModel = TableViewCellViewModel(title: "App Store".localized()) {
+            UIApplication.shared.openURL(AppConstants.appStoreURL)
+        }
+
+        let feedbackCellViewModel = TableViewCellViewModel(title: "Feedback".localized()) {
+            self.presentFeedbackMailComposer()
+        }
+
+        let developerCellViewModel = TableViewCellViewModel(title: "Developer".localized(), subtitle: "@ethanhuang13", cellStyle: .value1) {
+            UIApplication.shared.openURL(AppConstants.developerURL)
+        }
+
+        let githubCellViewModel = TableViewCellViewModel(title: "GitHub".localized(), subtitle: nil) {
+
+            UIApplication.shared.openURL(AppConstants.githubURL)
+        }
+
+        let sectionViewModel = TableViewSectionViewModel(header: "About".localized(), footer: AppConstants.aboutString, rows: [rateCellViewModel, feedbackCellViewModel, developerCellViewModel, githubCellViewModel])
+        return sectionViewModel
     }
 }

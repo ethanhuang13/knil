@@ -9,7 +9,7 @@
 import UIKit
 
 typealias UIViewControllerClosure = () -> UIViewController?
-typealias Closure = () -> Void
+public typealias Closure = () -> Void
 
 public struct TableViewCellViewModel {
     let title: String
@@ -22,14 +22,14 @@ public struct TableViewCellViewModel {
     let editActions: [UITableViewRowAction]
     var selectAction: Closure
 
-    init(title: String,
-         subtitle: String? = nil,
-         image: UIImage? = nil,
-         cellStyle: UITableViewCellStyle = .default,
-         selectionStyle: UITableViewCellSelectionStyle = .default,
-         accessoryType: UITableViewCellAccessoryType = .disclosureIndicator,
-         editActions: [UITableViewRowAction] = [],
-         selectAction: @escaping Closure = {}
+    public init(title: String,
+                subtitle: String? = nil,
+                image: UIImage? = nil,
+                cellStyle: UITableViewCellStyle = .default,
+                selectionStyle: UITableViewCellSelectionStyle = .default,
+                accessoryType: UITableViewCellAccessoryType = .disclosureIndicator,
+                editActions: [UITableViewRowAction] = [],
+                selectAction: @escaping Closure = {}
         ) {
         self.title = title
         self.subtitle = subtitle

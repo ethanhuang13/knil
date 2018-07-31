@@ -12,4 +12,10 @@ public struct TableViewSectionViewModel {
     public let header: String?
     public let footer: String?
     public let rows: [TableViewCellViewModel]
+
+    public init(header: String?, footer: String?, rows: [TableViewCellViewModel]) {
+        self.header = header
+        self.footer = footer
+        self.rows = rows
+    }
 }

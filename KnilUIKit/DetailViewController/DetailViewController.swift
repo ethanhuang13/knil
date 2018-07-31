@@ -63,7 +63,7 @@ class DetailViewController: UITableViewController {
             // Title section
             let titleRow = TableViewCellViewModel(title: userAASA.cellTitle, subtitle: userAASA.cellSubtitle, cellStyle: .subtitle, selectionStyle: .none, accessoryType: .none, selectAction: { })
             let aasaActionsRow = TableViewCellViewModel(title: "Actions".localized(), subtitle: "Open in other tools, see raw file, or reload.".localized(), cellStyle: .subtitle, selectAction: {
-                let alertController = UIAlertController(title: userAASA.url.absoluteString, message: nil, preferredStyle: .actionSheet)
+                let alertController = UIAlertController(title: userAASA.url.absoluteString, message: nil, preferredStyle: .alert)
 
                 alertController.addAction(UIAlertAction(title: "Open App Search API Validation Tool".localized(), style: .default, handler: { (_) in
                     self.openInSearchAPIValidation(hostname: userAASA.hostname)

@@ -25,6 +25,8 @@
 		6C3D007920FC9CF1007A567A /* UserAASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007820FC9CF1007A567A /* UserAASA.swift */; };
 		6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007B20FC9E00007A567A /* UserDataStore.swift */; };
 		6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007F20FCBEA1007A567A /* URLOpener.swift */; };
+		6C50DF8C2110571000A8B495 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50DF8B2110571000A8B495 /* AppConstants.swift */; };
+		6C50DF8E2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50DF8D2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift */; };
 		6CA03A6D20FB1DC3004BA91D /* AASAURLSuggestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */; };
 		6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */; };
 		6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */; };
@@ -156,6 +158,8 @@
 		6C3D007820FC9CF1007A567A /* UserAASA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAASA.swift; sourceTree = "<group>"; };
 		6C3D007B20FC9E00007A567A /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		6C3D007F20FCBEA1007A567A /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
+		6C50DF8B2110571000A8B495 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		6C50DF8D2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController+MFMailComposeViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAURLSuggestor.swift; sourceTree = "<group>"; };
 		6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				6CC82D30210EB11900D13EF5 /* SettingsViewController.swift */,
+				6C50DF8D2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 			children = (
 				6C0D219220E0F2A700FBFA86 /* AppDelegate.swift */,
 				6CC82D34210EB30900D13EF5 /* TabBarController.swift */,
+				6C50DF8B2110571000A8B495 /* AppConstants.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -697,6 +703,8 @@
 				6CC82D35210EB30900D13EF5 /* TabBarController.swift in Sources */,
 				6C0D219320E0F2A700FBFA86 /* AppDelegate.swift in Sources */,
 				6CC82D31210EB11900D13EF5 /* SettingsViewController.swift in Sources */,
+				6C50DF8C2110571000A8B495 /* AppConstants.swift in Sources */,
+				6C50DF8E2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
