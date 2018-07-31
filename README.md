@@ -1,8 +1,8 @@
-# Knil
+# Knil 🔗
 
 ![](https://travis-ci.org/ethanhuang13/knil.svg?branch=master) ![GitHub release](https://img.shields.io/github/release/ethanhuang13/knil.svg) ![GitHub top language](https://img.shields.io/github/languages/top/ethanhuang13/knil.svg) [![GitHub](https://img.shields.io/github/license/ethanhuang13/knil.svg)](https://github.com/ethanhuang13/knil/blob/master/LICENSE)
 
-Universal Link tester.
+Knil made Universal Link testing easier. It fetches and parses apple-app-site-association file for you to quickly check whether Universal Link is working.
 
 ## Features
 
