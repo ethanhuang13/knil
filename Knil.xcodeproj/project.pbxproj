@@ -14,18 +14,14 @@
 		6C0D21D720E0F55300FBFA86 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D21D620E0F55300FBFA86 /* CHANGELOG.md */; };
 		6C0D21E620E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; };
 		6C0D21ED20E0F6B000FBFA86 /* KnilUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21EC20E0F6B000FBFA86 /* KnilUIKitTests.swift */; };
-		6C0D21EF20E0F6B000FBFA86 /* KnilUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C0D21F220E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; };
 		6C0D21F320E0F6B000FBFA86 /* KnilUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C0D220920E0F6B900FBFA86 /* KnilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; };
-		6C0D221220E0F6B900FBFA86 /* KnilKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0D220220E0F6B900FBFA86 /* KnilKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C0D221520E0F6B900FBFA86 /* KnilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; };
 		6C0D221620E0F6B900FBFA86 /* KnilKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D220020E0F6B900FBFA86 /* KnilKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C0D222120E0F6E800FBFA86 /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C820E0F36E00FBFA86 /* TableViewViewModel.swift */; };
 		6C0D222320E0F70400FBFA86 /* TableViewSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21C920E0F36E00FBFA86 /* TableViewSectionViewModel.swift */; };
 		6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21CB20E0F36E00FBFA86 /* TableViewCellViewModel.swift */; };
-		6C0D222D20E0F75B00FBFA86 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */; };
-		6C0D223020E0F75B00FBFA86 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */; };
 		6C3D007920FC9CF1007A567A /* UserAASA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007820FC9CF1007A567A /* UserAASA.swift */; };
 		6C3D007C20FC9E00007A567A /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007B20FC9E00007A567A /* UserDataStore.swift */; };
 		6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007F20FCBEA1007A567A /* URLOpener.swift */; };
@@ -149,20 +145,14 @@
 		6C0D21D420E0F53500FBFA86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6C0D21D620E0F55300FBFA86 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KnilUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnilUIKit.h; sourceTree = "<group>"; };
 		6C0D21E020E0F6B000FBFA86 /* KnilUIKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilUIKit-Info.plist"; sourceTree = "<group>"; };
 		6C0D21E520E0F6B000FBFA86 /* KnilUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnilUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0D21EC20E0F6B000FBFA86 /* KnilUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnilUIKitTests.swift; sourceTree = "<group>"; };
 		6C0D21EE20E0F6B000FBFA86 /* KnilUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilUIKitTests-Info.plist"; sourceTree = "<group>"; };
 		6C0D220020E0F6B900FBFA86 /* KnilKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KnilKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C0D220220E0F6B900FBFA86 /* KnilKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnilKit.h; sourceTree = "<group>"; };
 		6C0D220320E0F6B900FBFA86 /* KnilKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilKit-Info.plist"; sourceTree = "<group>"; };
 		6C0D220820E0F6B900FBFA86 /* KnilKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnilKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0D221120E0F6B900FBFA86 /* KnilKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnilKitTests-Info.plist"; sourceTree = "<group>"; };
-		6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
-		6C0D222F20E0F75B00FBFA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		6C0D223120E0F75B00FBFA86 /* ActionExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActionExtension-Info.plist"; sourceTree = "<group>"; };
 		6C3D007820FC9CF1007A567A /* UserAASA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAASA.swift; sourceTree = "<group>"; };
 		6C3D007B20FC9E00007A567A /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		6C3D007F20FCBEA1007A567A /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
@@ -248,13 +238,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C0D222720E0F75B00FBFA86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -268,7 +251,6 @@
 				6C0D220E20E0F6B900FBFA86 /* KnilKitTests */,
 				6C0D21DE20E0F6B000FBFA86 /* KnilUIKit */,
 				6C0D21EB20E0F6B000FBFA86 /* KnilUIKitTests */,
-				6C0D222B20E0F75B00FBFA86 /* ActionExtension */,
 				6C0D219020E0F2A700FBFA86 /* Products */,
 				6CD53D4E20F71A96002FF804 /* Frameworks */,
 			);
@@ -282,7 +264,6 @@
 				6C0D21E520E0F6B000FBFA86 /* KnilUIKitTests.xctest */,
 				6C0D220020E0F6B900FBFA86 /* KnilKit.framework */,
 				6C0D220820E0F6B900FBFA86 /* KnilKitTests.xctest */,
-				6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,7 +316,6 @@
 				6CC52BCB20F45D4600C7A5B0 /* DetailViewController */,
 				6CEFF19E20FDFAD30087BD79 /* LinkViewController */,
 				6C0D21C720E0F36E00FBFA86 /* ViewModels */,
-				6C0D21DF20E0F6B000FBFA86 /* KnilUIKit.h */,
 				6C0D21E020E0F6B000FBFA86 /* KnilUIKit-Info.plist */,
 				6C3D007F20FCBEA1007A567A /* URLOpener.swift */,
 			);
@@ -359,7 +339,6 @@
 				6CD53D5020F71AA1002FF804 /* Extension */,
 				6CC52BE020F4A9B200C7A5B0 /* API */,
 				6C0D21C020E0F2CD00FBFA86 /* Model */,
-				6C0D220220E0F6B900FBFA86 /* KnilKit.h */,
 				6C0D220320E0F6B900FBFA86 /* KnilKit-Info.plist */,
 			);
 			path = KnilKit;
@@ -382,16 +361,6 @@
 				6CC52BDC20F4A4B500C7A5B0 /* AppPathTests.swift */,
 			);
 			path = KnilKitTests;
-			sourceTree = "<group>";
-		};
-		6C0D222B20E0F75B00FBFA86 /* ActionExtension */ = {
-			isa = PBXGroup;
-			children = (
-				6C0D222C20E0F75B00FBFA86 /* ActionViewController.swift */,
-				6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */,
-				6C0D223120E0F75B00FBFA86 /* ActionExtension-Info.plist */,
-			);
-			path = ActionExtension;
 			sourceTree = "<group>";
 		};
 		6C3D007A20FC9DCE007A567A /* UserData */ = {
@@ -517,7 +486,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C0D21EF20E0F6B000FBFA86 /* KnilUIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +493,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C0D221220E0F6B900FBFA86 /* KnilKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,23 +593,6 @@
 			productReference = 6C0D220820E0F6B900FBFA86 /* KnilKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6C0D222920E0F75B00FBFA86 /* ActionExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6C0D223520E0F75B00FBFA86 /* Build configuration list for PBXNativeTarget "ActionExtension" */;
-			buildPhases = (
-				6C0D222620E0F75B00FBFA86 /* Sources */,
-				6C0D222720E0F75B00FBFA86 /* Frameworks */,
-				6C0D222820E0F75B00FBFA86 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ActionExtension;
-			productName = ActionExtension;
-			productReference = 6C0D222A20E0F75B00FBFA86 /* ActionExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -670,9 +620,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 6C0D218E20E0F2A600FBFA86;
 					};
-					6C0D222920E0F75B00FBFA86 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 				};
 			};
 			buildConfigurationList = 6C0D218A20E0F2A600FBFA86 /* Build configuration list for PBXProject "Knil" */;
@@ -693,7 +640,6 @@
 				6C0D220720E0F6B900FBFA86 /* KnilKitTests */,
 				6C0D21DC20E0F6B000FBFA86 /* KnilUIKit */,
 				6C0D21E420E0F6B000FBFA86 /* KnilUIKitTests */,
-				6C0D222920E0F75B00FBFA86 /* ActionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -738,14 +684,6 @@
 				6CC52C0E20F525BF00C7A5B0 /* CATCHPLAY-unsigned-AASA in Resources */,
 				6CC52C0C20F524BF00C7A5B0 /* Twitter-signed-AASA in Resources */,
 				6CC52C1320F5E5EE00C7A5B0 /* Facebook-signed-AASA in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6C0D222820E0F75B00FBFA86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C0D223020E0F75B00FBFA86 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,14 +772,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C0D222620E0F75B00FBFA86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C0D222D20E0F75B00FBFA86 /* ActionViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -884,14 +814,6 @@
 				6C0D219C20E0F2A800FBFA86 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		6C0D222E20E0F75B00FBFA86 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C0D222F20E0F75B00FBFA86 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1245,44 +1167,6 @@
 			};
 			name = Release;
 		};
-		6C0D223620E0F75B00FBFA86 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SE9N6X5V7C;
-				INFOPLIST_FILE = "$(SRCROOT)/ActionExtension/ActionExtension-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil.ActionExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6C0D223720E0F75B00FBFA86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SE9N6X5V7C;
-				INFOPLIST_FILE = "$(SRCROOT)/ActionExtension/ActionExtension-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil.ActionExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1336,15 +1220,6 @@
 			buildConfigurations = (
 				6C0D221B20E0F6B900FBFA86 /* Debug */,
 				6C0D221C20E0F6B900FBFA86 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6C0D223520E0F75B00FBFA86 /* Build configuration list for PBXNativeTarget "ActionExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6C0D223620E0F75B00FBFA86 /* Debug */,
-				6C0D223720E0F75B00FBFA86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
