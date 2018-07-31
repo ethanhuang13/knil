@@ -55,6 +55,11 @@ public class TableViewViewModel: NSObject, UITableViewDataSource, UITableViewDel
         cellViewModel.selectAction()
     }
 
+    public func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let cellViewModel = sections[indexPath.section].rows[indexPath.row]
+        cellViewModel.detailAction()
+    }
+
     public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         return .none
     }

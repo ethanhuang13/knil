@@ -27,6 +27,8 @@
 		6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D007F20FCBEA1007A567A /* URLOpener.swift */; };
 		6C50DF8C2110571000A8B495 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50DF8B2110571000A8B495 /* AppConstants.swift */; };
 		6C50DF8E2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50DF8D2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift */; };
+		6C50DF91211063BF00A8B495 /* ComposeLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50DF90211063BF00A8B495 /* ComposeLinkViewController.swift */; };
+		6C50DF932110D31D00A8B495 /* URLComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50DF922110D31D00A8B495 /* URLComponents+Extension.swift */; };
 		6CA03A6D20FB1DC3004BA91D /* AASAURLSuggestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */; };
 		6CC52BCA20F45AD600C7A5B0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */; };
 		6CC52BCD20F45D5100C7A5B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */; };
@@ -160,6 +162,8 @@
 		6C3D007F20FCBEA1007A567A /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		6C50DF8B2110571000A8B495 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		6C50DF8D2110581400A8B495 /* SettingsViewController+MFMailComposeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewController+MFMailComposeViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		6C50DF90211063BF00A8B495 /* ComposeLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeLinkViewController.swift; sourceTree = "<group>"; };
+		6C50DF922110D31D00A8B495 /* URLComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Extension.swift"; sourceTree = "<group>"; };
 		6CA03A6C20FB1DC3004BA91D /* AASAURLSuggestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAURLSuggestor.swift; sourceTree = "<group>"; };
 		6CC52BC920F45AD600C7A5B0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		6CC52BCC20F45D5100C7A5B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 				6CD53D5320F71B64002FF804 /* Extension */,
 				6CC52BC820F45AC400C7A5B0 /* ListViewController */,
 				6CC52BCB20F45D4600C7A5B0 /* DetailViewController */,
+				6C50DF8F211063AE00A8B495 /* ComposeLink */,
 				6CEFF19E20FDFAD30087BD79 /* LinkViewController */,
 				6C0D21C720E0F36E00FBFA86 /* ViewModels */,
 				6C0D21E020E0F6B000FBFA86 /* KnilUIKit-Info.plist */,
@@ -375,6 +380,14 @@
 				6CEFF19820FDD42E0087BD79 /* UserApp.swift */,
 			);
 			path = UserData;
+			sourceTree = "<group>";
+		};
+		6C50DF8F211063AE00A8B495 /* ComposeLink */ = {
+			isa = PBXGroup;
+			children = (
+				6C50DF90211063BF00A8B495 /* ComposeLinkViewController.swift */,
+			);
+			path = ComposeLink;
 			sourceTree = "<group>";
 		};
 		6CA03A6B20FB1DB9004BA91D /* Tool */ = {
@@ -458,6 +471,7 @@
 			children = (
 				6CD53D5120F71AAC002FF804 /* String+Extension.swift */,
 				6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */,
+				6C50DF922110D31D00A8B495 /* URLComponents+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -723,6 +737,7 @@
 				6CEB657720FCEDCB008E0213 /* UserAASA+Extension.swift in Sources */,
 				6C0D222520E0F70400FBFA86 /* TableViewCellViewModel.swift in Sources */,
 				6CC82D37210EB48100D13EF5 /* UIColor+Extension.swift in Sources */,
+				6C50DF91211063BF00A8B495 /* ComposeLinkViewController.swift in Sources */,
 				6CC82D39210EB56D00D13EF5 /* UINavigationController+Extension.swift in Sources */,
 				6C3D008020FCBEA1007A567A /* URLOpener.swift in Sources */,
 				6CC82D40210EBE3A00D13EF5 /* UserDefaults+Extension.swift in Sources */,
@@ -752,6 +767,7 @@
 				6CC52BD020F49E9E00C7A5B0 /* AASA.swift in Sources */,
 				6CC52BD920F4A30C00C7A5B0 /* AppDetail.swift in Sources */,
 				6CC52BD220F49EAB00C7A5B0 /* AASAFetcher.swift in Sources */,
+				6C50DF932110D31D00A8B495 /* URLComponents+Extension.swift in Sources */,
 				6CD53D4D20F715E7002FF804 /* AASAValidatorError.swift in Sources */,
 				6CD53D4B20F7149E002FF804 /* AASAValidator.swift in Sources */,
 				6CC52BDB20F4A4A100C7A5B0 /* AppPath.swift in Sources */,

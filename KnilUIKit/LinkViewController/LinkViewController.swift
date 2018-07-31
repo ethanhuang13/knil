@@ -9,8 +9,13 @@
 import UIKit
 import KnilKit
 
+protocol LinkViewControllerDelegate: class {
+    func duplicateLinkAndCompose(_ url: URL)
+}
+
 class LinkViewController: UITableViewController {
     public var urlOpener: URLOpener?
+    internal weak var delegate: LinkViewControllerDelegate?
     private lazy var viewModel: TableViewViewModel = { TableViewViewModel(tableViewController: self) }()
     private let userApp: UserApp
 
@@ -38,8 +43,21 @@ class LinkViewController: UITableViewController {
 
     private func reloadData() {
         DispatchQueue.main.async {
-            if let rows = self.userApp.paths?.map({ $0.cellViewModel(hostname: self.userApp.hostname, urlOpener: self.urlOpener) }) {
-                let section = TableViewSectionViewModel(header: "Universal Link", footer: "Make sure you have the app installed. Tap each path to test, swipe left to edit.", rows: rows)
+            if let rows = self.userApp.paths?.map ({ path in
+                return TableViewCellViewModel(title: path.cellTitle, cellStyle: .default, accessoryType: .detailDisclosureButton, selectAction: {
+                    if let url = path.url(hostname: self.userApp.hostname) {
+                        _ = self.urlOpener?.openURL(url)
+                    }
+                }, detailAction: {
+                    if let url = path.url(hostname: self.userApp.hostname) {
+                        DispatchQueue.main.async {
+                            self.navigationController?.popViewController(animated: true)
+                            self.delegate?.duplicateLinkAndCompose(url)
+                        }
+                    }
+                })
+            }) {
+                let section = TableViewSectionViewModel(header: "Universal Link".localized(), footer: "Make sure you have the app installed. Tap each link to test. If labelled with NOT, it should open in Safari. Otherwise, it should open in the app.\n\n Tap (i) to duplicate and compose the link for custom testing.".localized(), rows: rows)
                 self.viewModel.sections = [section]
             }
 

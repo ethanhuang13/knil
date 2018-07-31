@@ -21,6 +21,7 @@ public struct TableViewCellViewModel {
     let accessoryType: UITableViewCellAccessoryType
     let editActions: [UITableViewRowAction]
     var selectAction: Closure
+    var detailAction: Closure
 
     public init(title: String,
                 subtitle: String? = nil,
@@ -29,7 +30,8 @@ public struct TableViewCellViewModel {
                 selectionStyle: UITableViewCellSelectionStyle = .default,
                 accessoryType: UITableViewCellAccessoryType = .disclosureIndicator,
                 editActions: [UITableViewRowAction] = [],
-                selectAction: @escaping Closure = {}
+                selectAction: @escaping Closure = {},
+                detailAction: @escaping Closure = {}
         ) {
         self.title = title
         self.subtitle = subtitle
@@ -40,9 +42,11 @@ public struct TableViewCellViewModel {
         self.accessoryType = accessoryType
         self.editActions = editActions
         self.selectAction = selectAction
+        self.detailAction = detailAction
     }
 
     func configure(_ cell: UITableViewCell) {
+        cell.backgroundColor = .background
         cell.textLabel?.text = title
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = subtitle

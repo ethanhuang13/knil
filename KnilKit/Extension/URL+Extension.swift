@@ -27,4 +27,19 @@ extension URL {
             completion(.value((data, url)))
             }.resume()
     }
+
+    public func deletingPathAndQuery() -> URL? {
+        var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false)
+        urlComponents?.path = ""
+        urlComponents?.queryItems = nil
+        return urlComponents?.url
+    }
+
+    public var relativePathAndQuery: String {
+        if let query = query {
+            return relativePath + "?" + query
+        } else {
+            return relativePath
+        }
+    }
 }

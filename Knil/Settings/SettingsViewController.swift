@@ -46,22 +46,21 @@ class SettingsViewController: UITableViewController {
     }
 
     private var aboutSection: TableViewSectionViewModel {
-        let rateCellViewModel = TableViewCellViewModel(title: "App Store".localized()) {
+        let rateCellViewModel = TableViewCellViewModel(title: "App Store".localized(), selectAction: {
             UIApplication.shared.openURL(AppConstants.appStoreURL)
-        }
+        })
 
-        let feedbackCellViewModel = TableViewCellViewModel(title: "Feedback".localized()) {
+        let feedbackCellViewModel = TableViewCellViewModel(title: "Feedback".localized(), selectAction: {
             self.presentFeedbackMailComposer()
-        }
+        })
 
-        let developerCellViewModel = TableViewCellViewModel(title: "Developer".localized(), subtitle: "@ethanhuang13", cellStyle: .value1) {
+        let developerCellViewModel = TableViewCellViewModel(title: "Developer".localized(), subtitle: "@ethanhuang13", cellStyle: .value1, selectAction: {
             UIApplication.shared.openURL(AppConstants.developerURL)
-        }
+        })
 
-        let githubCellViewModel = TableViewCellViewModel(title: "GitHub".localized(), subtitle: nil) {
-
+        let githubCellViewModel = TableViewCellViewModel(title: "GitHub".localized(), selectAction: {
             UIApplication.shared.openURL(AppConstants.githubURL)
-        }
+        })
 
         let sectionViewModel = TableViewSectionViewModel(header: "About".localized(), footer: AppConstants.aboutString, rows: [rateCellViewModel, feedbackCellViewModel, developerCellViewModel, githubCellViewModel])
         return sectionViewModel

@@ -13,12 +13,4 @@ extension AppPath {
     var cellTitle: String {
         return excluded ? "NOT \(pathString)" : pathString
     }
-
-    func cellViewModel(hostname: String, urlOpener: URLOpener?) -> TableViewCellViewModel {
-        return TableViewCellViewModel(title: cellTitle, cellStyle: .default, selectAction: {
-            if let url = self.url(hostname: hostname) {
-                _ = urlOpener?.openURL(url)
-            }
-        })
-    }
 }

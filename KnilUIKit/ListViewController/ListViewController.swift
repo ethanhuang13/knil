@@ -46,32 +46,35 @@ public class ListViewController: UITableViewController {
 
     private func reloadData() {
         DispatchQueue.main.async {
-            let emptyRow = TableViewCellViewModel(title: "Tap here to download", subtitle: "apple-app-site-association file", cellStyle: .subtitle, selectAction: {
-                self.presentAddingAASAAlertController()
-            })
-            let rows: [TableViewCellViewModel] = self.dataStore.list(sortedBy: .hostname).map { userAASA in
-                let removeAction = UITableViewRowAction(style: .destructive, title: "Remove".localized(), handler: { (_, _) in
-                    DispatchQueue.main.async {
-                        self.dataStore.remove(userAASA)
-                        self.reloadData()
-                    }
-                })
-
-                let row = TableViewCellViewModel(title: userAASA.cellTitle, subtitle: userAASA.cellSubtitle, cellStyle: .subtitle, selectionStyle: .default, accessoryType: .disclosureIndicator, editActions: [removeAction], selectAction: {
-                    self.showDetailViewController(userAASA: userAASA)
-                })
-                return row
-            }
-
-            let section = TableViewSectionViewModel(header: nil, footer: nil, rows: rows.isEmpty ? [emptyRow] : rows)
-            self.viewModel.sections = [section]
+            self.viewModel.sections = [self.aasaSection]
             self.tableView.reloadData()
         }
     }
 
+    private var aasaSection: TableViewSectionViewModel {
+        let emptyRow = TableViewCellViewModel(title: "Tap here to download".localized(), subtitle: "apple-app-site-association file".localized(), cellStyle: .subtitle, selectAction: {
+            self.presentAddingAASAAlertController()
+        })
+        let rows: [TableViewCellViewModel] = self.dataStore.list(sortedBy: .hostname).map { userAASA in
+            let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete".localized(), handler: { (_, _) in
+                self.dataStore.remove(userAASA)
+                self.reloadData()
+            })
+
+            let row = TableViewCellViewModel(title: userAASA.cellTitle, subtitle: userAASA.cellSubtitle, cellStyle: .subtitle, selectionStyle: .default, editActions: [deleteAction], selectAction: {
+                self.showDetailViewController(userAASA: userAASA)
+            })
+            return row
+        }
+
+        let section = TableViewSectionViewModel(header: nil, footer: nil, rows: rows.isEmpty ? [emptyRow] : rows)
+
+        return section
+    }
+
     @objc private func presentAddingAASAAlertController() {
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: "Enter Hostname".localized(), message: "If you enter a hostname, Knil will fetch its /apple-app-site-association.\n\nOr just enter a company name like twitter, fb, or netflix.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Enter Hostname".localized(), message: "If you enter a hostname, Knil will fetch its /apple-app-site-association.\n\nOr just enter a company name like twitter, fb, or netflix.".localized(), preferredStyle: .alert)
             alertController.addTextField { (textField) in
                 textField.placeholder = "www.company.com/apple-app-site-association"
                 textField.clearButtonMode = .always
@@ -104,7 +107,6 @@ public class ListViewController: UITableViewController {
 
     private func presentConfirmURLAlertController(urlString: String, suggesting userAASA: UserAASA? = nil) {
         DispatchQueue.main.async {
-
             let alertController = UIAlertController(title: "Confirm or Adjust".localized(), message: "Suggested AASA URL:\n\(urlString)".localized(), preferredStyle: .alert)
             alertController.addTextField { (textField) in
                 textField.text = urlString
@@ -168,8 +170,7 @@ public class ListViewController: UITableViewController {
 
     private func showDetailViewController(userAASA: UserAASA) {
         DispatchQueue.main.async {
-            let vc = DetailViewController(userAASA: userAASA)
-            vc.urlOpener = self.urlOpener
+            let vc = DetailViewController(userAASA: userAASA, urlOpener: self.urlOpener)
             vc.delegate = self
             self.navigationController?.show(vc, sender: self)
         }

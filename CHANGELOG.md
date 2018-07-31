@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Settings About section
+- Link composer
 
 ### Removed
 - Action extension
