@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Elaborapp Co., Ltd. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class UserApp: Codable {
     public let hostname: String

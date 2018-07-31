@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Elaborapp Co., Ltd. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import KnilKit
 
 extension UserApp {
