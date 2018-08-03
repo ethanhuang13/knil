@@ -51,12 +51,14 @@ public class UserDataStore {
         }
     }
 
-    public func upsert(_ userAASA: UserAASA) {
+    public func upsert(_ userAASA: UserAASA) -> UserAASA {
         if let existUserAASA = userAASAs[userAASA.hostname] {
             existUserAASA.update(userAASA.aasa)
             notifyDidUpdate()
+            return existUserAASA
         } else {
             userAASAs[userAASA.hostname] = userAASA
+            return userAASA
         }
     }
 

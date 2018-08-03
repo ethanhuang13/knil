@@ -92,8 +92,8 @@ public class ListViewController: UITableViewController {
                 AASAURLSuggestor.suggestAASA(from: string, completion: { (result) in
                     switch result {
                     case .value(let userAASA):
-                        self.dataStore.upsert(userAASA)
-                        self.showDetailViewController(userAASA: userAASA)
+                        let updatedUserAASA = self.dataStore.upsert(userAASA)
+                        self.showDetailViewController(userAASA: updatedUserAASA)
                     case .error(let error):
                         print(error.localizedDescription)
                         self.presentConfirmURLAlertController(urlString: AASAURLSuggestor.suggestURL(from: string)?.absoluteString ?? string)
@@ -125,8 +125,8 @@ public class ListViewController: UITableViewController {
 
                 if let userAASA = userAASA,
                     string == urlString {
-                    self.dataStore.upsert(userAASA)
-                    self.showDetailViewController(userAASA: userAASA)
+                    let updatedUserAASA = self.dataStore.upsert(userAASA)
+                    self.showDetailViewController(userAASA: updatedUserAASA)
                 } else {
                     guard let url = URL(string: string) else {
                         self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: "URL invalid.".localized()), animated: true, completion: nil)
@@ -143,16 +143,16 @@ public class ListViewController: UITableViewController {
                                     let alertController = UIAlertController(title: "Redirection Occurred".localized(), message: message, preferredStyle: .alert)
                                     alertController.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { (_) in
                                         let userAASA = UserAASA(aasa: aasa, from: url)
-                                        self.dataStore.upsert(userAASA)
+                                        let updatedUserAASA = self.dataStore.upsert(userAASA)
+                                        self.showDetailViewController(userAASA: updatedUserAASA)
                                         self.dataStore.archive()
-                                        self.showDetailViewController(userAASA: userAASA)
                                     }))
                                     self.present(alertController, animated: true, completion: { })
                                 } else {
                                     let userAASA = UserAASA(aasa: aasa, from: url)
-                                    self.dataStore.upsert(userAASA)
+                                    let updatedUserAASA = self.dataStore.upsert(userAASA)
+                                    self.showDetailViewController(userAASA: updatedUserAASA)
                                     self.dataStore.archive()
-                                    self.showDetailViewController(userAASA: userAASA)
                                 }
 
                             case .error(let error):
@@ -189,7 +189,7 @@ extension ListViewController: UserDataStoreDelegate {
 
 extension ListViewController: DetailViewControllerDelegate {
     func update(_ userAASA: UserAASA) {
-        self.dataStore.upsert(userAASA)
+        _ = self.dataStore.upsert(userAASA)
         self.dataStore.archive()
     }
 }

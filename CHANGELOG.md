@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Custom link query escaping
+- List item updating
 
 ## [1.0.0(4)] - 2018-08-01
 ### Added
