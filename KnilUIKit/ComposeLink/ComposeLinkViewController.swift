@@ -10,7 +10,7 @@ import UIKit
 import KnilKit
 
 protocol ComposeLinkViewControllerDelegate: class {
-    func saveLink(_ url: URL)
+    func saveLink(_ url: URL, title: String)
 }
 
 /// Compose a link
@@ -19,13 +19,15 @@ class ComposeLinkViewController: UITableViewController {
     internal weak var delegate: ComposeLinkViewControllerDelegate?
     private lazy var viewModel: TableViewViewModel = { TableViewViewModel(tableViewController: self) }()
     private var urlComponents: URLComponents
+    private var linkTitle: String
 
-    init?(url: URL, urlOpener: URLOpener?) {
+    init?(url: URL, title: String, urlOpener: URLOpener?) {
         guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             return nil
         }
 
         self.urlComponents = urlComponents
+        self.linkTitle = title
         self.urlOpener = urlOpener
         super.init(style: .grouped)
     }
@@ -59,7 +61,7 @@ class ComposeLinkViewController: UITableViewController {
         guard let url = urlComponents.url else {
             return
         }
-        self.delegate?.saveLink(url)
+        self.delegate?.saveLink(url, title: self.linkTitle)
         self.dismiss(animated: true, completion: {})
     }
 
@@ -76,13 +78,33 @@ class ComposeLinkViewController: UITableViewController {
 
     // Display the Full URL
     private var urlSection: TableViewSectionViewModel {
+        let title = linkTitle.isEmpty ? "(Untitled)".localized() : linkTitle
+        let titleRow = TableViewCellViewModel(title: title, selectAction: {
+            let alertController = UIAlertController(title: "Edit Link Title".localized(), message: "You can name this link.".localized(), preferredStyle: .alert)
+            alertController.addTextField(configurationHandler: { (textField) in
+                textField.clearButtonMode = .always
+                textField.autocapitalizationType = .words
+            })
+            alertController.addAction(UIAlertAction(title: "Save".localized(), style: .default, handler: { (_) in
+                guard let title = alertController.textFields?.first?.text else {
+                    return
+                }
+
+                self.linkTitle = title
+                self.reloadData()
+            }))
+            alertController.addAction(.cancelAction)
+
+            self.present(alertController, animated: true, completion: { })
+        })
+
         let urlRow = TableViewCellViewModel(title: self.urlComponents.urlString, selectAction: {
             guard let url = self.urlComponents.url else {
                 return
             }
             _ = self.urlOpener?.openURL(url)
         })
-        let urlSection = TableViewSectionViewModel(header: nil, footer: "Tap the link to test. Edit path and query below.".localized(), rows: [urlRow])
+        let urlSection = TableViewSectionViewModel(header: nil, footer: "Tap the link to test. Edit path and query below.".localized(), rows: [titleRow, urlRow])
         return urlSection
     }
 

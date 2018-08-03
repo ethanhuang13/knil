@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Pasteboard detection for custom link adding
+- Custom link title
 
 ### Fixed
 - Custom link query escaping

@@ -14,7 +14,7 @@ public class UserAASA: Codable {
     public let url: URL
     public let hostname: String
     public let userApps: [UserApp]
-    public var customURLs: [URL]
+    public var customURLs: [URL: String]
 
     public init(aasa: AASA, from url: URL) {
         self.aasa = aasa
@@ -22,7 +22,7 @@ public class UserAASA: Codable {
         self.url = url
         self.hostname = url.host?.lowercased() ?? ""
         self.userApps = UserAASA.extractUserApps(from: aasa, hostname: hostname)
-        self.customURLs = []
+        self.customURLs = [:]
     }
 
     public func update(_ aasa: AASA) {

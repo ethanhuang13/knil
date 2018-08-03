@@ -102,18 +102,19 @@ class DetailViewController: UITableViewController {
         let userAASA = self.userAASA
 
         var rows: [TableViewCellViewModel] = []
-        let customLinkRows: [TableViewCellViewModel] = userAASA.customURLs.sorted(by: { $0.absoluteString < $1.absoluteString }).map { url in
+        let customLinkRows: [TableViewCellViewModel] = userAASA.customURLs.sorted(by: { $0.key.absoluteString < $1.key.absoluteString }).map { pair in
+            let url = pair.key
+            let cellTitle = pair.value.isEmpty ? "(No Title)".localized() : pair.value
+
             let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete".localized(), handler: { (_, _) in
-                if let index = userAASA.customURLs.index(of: url) {
-                    userAASA.customURLs.remove(at: index)
-                    self.reloadData()
-                }
+                userAASA.customURLs.removeValue(forKey: pair.key)
+                self.reloadData()
             })
 
-            return TableViewCellViewModel(title: url.relativePathAndQuery, accessoryType: .detailDisclosureButton, editActions: [deleteAction], selectAction: {
+            return TableViewCellViewModel(title: cellTitle, subtitle: url.relativePathAndQuery, cellStyle: .subtitle, accessoryType: .detailDisclosureButton, editActions: [deleteAction], selectAction: {
                 _ = self.urlOpener?.openURL(url)
             }, detailAction: {
-                self.composeLink(url)
+                self.composeLink(url, title: pair.value)
             })
         }
         rows.append(contentsOf: customLinkRows)
@@ -122,7 +123,7 @@ class DetailViewController: UITableViewController {
             guard let url = self.userAASA.url.deletingPathAndQuery() else {
                 return
             }
-            self.composeLink(url)
+            self.composeLink(url, title: "")
         })
         rows.append(addCustomLinkRow)
 
@@ -130,7 +131,7 @@ class DetailViewController: UITableViewController {
             let url = URL(string: pasteboardString),
             url.host == self.userAASA.hostname {
             let pasteLinkRow = TableViewCellViewModel(title: "+ Add Link From Clipboard".localized(), subtitle: url.absoluteString, cellStyle: .subtitle, selectAction: {
-                self.composeLink(url)
+                self.composeLink(url, title: "")
             })
             rows.append(pasteLinkRow)
         }
@@ -175,8 +176,8 @@ class DetailViewController: UITableViewController {
         return sections
     }
 
-    @objc private func composeLink(_ url: URL) {
-        guard let vc = ComposeLinkViewController(url: url, urlOpener: self.urlOpener) else {
+    @objc private func composeLink(_ url: URL, title: String) {
+        guard let vc = ComposeLinkViewController(url: url, title: title, urlOpener: self.urlOpener) else {
             return
         }
         vc.delegate = self
@@ -304,25 +305,21 @@ extension DetailViewController: SKStoreProductViewControllerDelegate {
 }
 
 extension DetailViewController: ComposeLinkViewControllerDelegate {
-    func saveLink(_ url: URL) {
+    func saveLink(_ url: URL, title: String) {
         DispatchQueue.main.async {
-            if self.userAASA.customURLs.index(of: url) != nil {
-                return // Don't need to save the same url
-            }
-
             if url == self.userAASA.url.deletingPathAndQuery() {
                 return // Nothing to save
+            } else {
+                self.userAASA.customURLs[url] = title
+                self.delegate?.update(self.userAASA)
+                self.reloadData()
             }
-
-            self.userAASA.customURLs.append(url)
-            self.delegate?.update(self.userAASA)
-            self.reloadData()
         }
     }
 }
 
 extension DetailViewController: LinkViewControllerDelegate {
     func duplicateLinkAndCompose(_ url: URL) {
-        self.composeLink(url)
+        self.composeLink(url, title: "")
     }
 }
