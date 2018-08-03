@@ -46,7 +46,15 @@ class DetailViewController: UITableViewController {
             self.reloadData()
         })
 
+        NotificationCenter.default.addObserver(self, selector: #selector(pasteboardDidChange), name: .UIPasteboardChanged, object: nil)
+
         reloadData()
+    }
+
+    @objc private func pasteboardDidChange() {
+        DispatchQueue.main.async {
+            self.reloadData()
+        }
     }
 
     private func update(_ userAASA: UserAASA) {
@@ -93,6 +101,7 @@ class DetailViewController: UITableViewController {
     private var customLinksSection: TableViewSectionViewModel {
         let userAASA = self.userAASA
 
+        var rows: [TableViewCellViewModel] = []
         let customLinkRows: [TableViewCellViewModel] = userAASA.customURLs.sorted(by: { $0.absoluteString < $1.absoluteString }).map { url in
             let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete".localized(), handler: { (_, _) in
                 if let index = userAASA.customURLs.index(of: url) {
@@ -107,6 +116,7 @@ class DetailViewController: UITableViewController {
                 self.composeLink(url)
             })
         }
+        rows.append(contentsOf: customLinkRows)
 
         let addCustomLinkRow = TableViewCellViewModel(title: "+ Add Link".localized(), selectAction: {
             guard let url = self.userAASA.url.deletingPathAndQuery() else {
@@ -114,9 +124,19 @@ class DetailViewController: UITableViewController {
             }
             self.composeLink(url)
         })
+        rows.append(addCustomLinkRow)
+
+        if let pasteboardString = UIPasteboard.general.string,
+            let url = URL(string: pasteboardString),
+            url.host == self.userAASA.hostname {
+            let pasteLinkRow = TableViewCellViewModel(title: "+ Add Link From Clipboard".localized(), subtitle: url.absoluteString, cellStyle: .subtitle, selectAction: {
+                self.composeLink(url)
+            })
+            rows.append(pasteLinkRow)
+        }
 
         let footer = customLinkRows.isEmpty ? "Add custom links for Universal Link testing.".localized() : "Add custom links for Universal Link testing. Tap (i) to duplicate and compose the link.".localized()
-        let customLinksSection = TableViewSectionViewModel(header: "Custom Links".localized(), footer: footer, rows: customLinkRows + [addCustomLinkRow])
+        let customLinksSection = TableViewSectionViewModel(header: "Custom Links".localized(), footer: footer, rows: rows)
 
         return customLinksSection
     }

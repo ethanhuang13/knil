@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Pasteboard detection for custom link adding
 
 ## [1.0.0(4)] - 2018-08-01
 ### Added
