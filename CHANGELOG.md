@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Pasteboard detection for custom link adding
 
+### Fixed
+- Custom link query escaping
+
 ## [1.0.0(4)] - 2018-08-01
 ### Added
 - Settings About section

@@ -204,8 +204,8 @@ class ComposeLinkViewController: UITableViewController {
         alertController.addAction(UIAlertAction(title: "Add".localized(), style: .default, handler: { (_) in
             guard let textFields = alertController.textFields,
                 textFields.count > 1,
-                let keyString = textFields[0].text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-                let valueString = textFields[1].text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+                let keyString = textFields[0].text,
+                let valueString = textFields[1].text else {
                     return
             }
 
@@ -240,8 +240,8 @@ class ComposeLinkViewController: UITableViewController {
         alertController.addAction(UIAlertAction(title: "Save".localized(), style: .default, handler: { (_) in
             guard let textFields = alertController.textFields,
                 textFields.count > 1,
-                let keyString = textFields[0].text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-                let valueString = textFields[1].text?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+                let keyString = textFields[0].text,
+                let valueString = textFields[1].text else {
                     return
             }
 
