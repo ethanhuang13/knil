@@ -14,7 +14,8 @@ Knil made Universal Link testing easier. It fetches and parses apple-app-site-as
 | 🚀 | List all Universal Links. One tap to test! |
 | 🛠️ | Customizable test links |
 | 🤝 | Link to other validation tools like Branch.io's [AASA Validator](https://branch.io/resources/aasa-validator/) or Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool/) | 
-| 🏗 | More...|
+| 🆓 | Free without ads |
+| 🚫 | No third-party tracking or analytics |
 
 ## Naming
 ```
