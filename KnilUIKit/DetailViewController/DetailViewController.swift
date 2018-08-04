@@ -320,6 +320,17 @@ extension DetailViewController: ComposeLinkViewControllerDelegate {
 
 extension DetailViewController: LinkViewControllerDelegate {
     func duplicateLinkAndCompose(_ url: URL) {
-        self.composeLink(url, title: "")
+        if tableView.numberOfSections > 1 {
+            let row = tableView.numberOfRows(inSection: 1)
+            let indexPath = IndexPath(row: row - 1, section: 1)
+
+            tableView.performUpdates({
+                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+            }) {
+                self.composeLink(url, title: "")
+            }
+        } else {
+            composeLink(url, title: "")
+        }
     }
 }

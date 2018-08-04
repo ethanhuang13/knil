@@ -52,7 +52,9 @@ class LinkViewController: UITableViewController {
                     if let url = path.url(hostname: self.userApp.hostname) {
                         DispatchQueue.main.async {
                             self.navigationController?.popViewController(animated: true)
-                            self.delegate?.duplicateLinkAndCompose(url)
+                            self.navigationController?.transitionCoordinator?.animate(alongsideTransition: nil, completion: { (_) in
+                                self.delegate?.duplicateLinkAndCompose(url)
+                            })
                         }
                     }
                 })
