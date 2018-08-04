@@ -9,22 +9,8 @@
 import Foundation
 
 public struct AASAFetcher {
-    public static func fetch(host: String, completion: @escaping (Result<(AASA, URL)>) -> Void) {
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = host
-        urlComponents.path = "/apple-app-site-association"
-
-        guard let url = urlComponents.url else {
-            completion(.error(KnilKitError.invalidURLString(host)))
-            return
-        }
-
-        fetch(url: url, completion: completion)
-    }
 
     /// Will return AASA and Redirected(if occurred) URL
-
     public static func fetch(url: URL, completion: @escaping (Result<(AASA, URL)>) -> Void) {
         url.performRequest { (result) in
             switch result {

@@ -5,7 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-- Duplicate Universal Link flow animation 
+### Added
+- Duplicate Universal Link flow animation
+- Handle sites that put AASA in /.well-known/ 
 
 ## [1.0.0(5)] - 2018-08-03
 ### Added

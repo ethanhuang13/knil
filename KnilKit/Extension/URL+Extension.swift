@@ -19,9 +19,11 @@ extension URL {
             }
 
             guard let data = data,
-                let url = (response as? HTTPURLResponse)?.url else {
-                completion(.error(KnilKitError.noData))
-                return
+                let urlResponse = response as? HTTPURLResponse,
+                urlResponse.statusCode == 200,
+                let url = urlResponse.url else {
+                    completion(.error(KnilKitError.noData))
+                    return
             }
 
             completion(.value((data, url)))

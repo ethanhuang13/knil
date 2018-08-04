@@ -32,16 +32,35 @@ public struct AASAURLSuggestor {
         }
     }
 
-    public static func suggestURL(from string: String) -> URL? {
+    private static func aasaURL(host: String) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
-        urlComponents.host = suggestHostname(from: string)
+        urlComponents.host = host
         urlComponents.path = "/apple-app-site-association"
         return urlComponents.url
     }
 
+    private static func aasaWellKnownURL(host: String) -> URL? {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = host
+        urlComponents.path = "/.well-known/apple-app-site-association"
+        return urlComponents.url
+    }
+
+    public static func suggestURL(from string: String, wellKnown: Bool = false) -> URL? {
+        let host = suggestHostname(from: string)
+
+        if wellKnown {
+            return aasaWellKnownURL(host: host)
+        } else {
+            return aasaURL(host: host)
+        }
+    }
+
     public static func suggestAASA(from string: String, completion: @escaping (_ result: Result<UserAASA>) -> Void) {
-        guard let url = suggestURL(from: string) else {
+        guard let url = suggestURL(from: string),
+            let wellKnownURL = suggestURL(from: string, wellKnown: true) else {
             completion(.error(KnilKitError.invalidURLString(string)))
             return
         }
@@ -51,8 +70,16 @@ public struct AASAURLSuggestor {
             case .value(let (aasa, url)):
                 let userAASA = UserAASA(aasa: aasa, from: url)
                 completion(.value(userAASA))
-            case .error(let error):
-                completion(.error(error))
+            case .error(_):
+                AASAFetcher.fetch(url: wellKnownURL, completion: { (result) in
+                    switch result {
+                    case .value(let (aasa, url)):
+                        let userAASA = UserAASA(aasa: aasa, from: url)
+                        completion(.value(userAASA))
+                    case .error(let error):
+                        completion(.error(error))
+                    }
+                })
             }
         }
     }
