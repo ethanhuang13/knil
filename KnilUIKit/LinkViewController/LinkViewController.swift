@@ -59,7 +59,7 @@ class LinkViewController: UITableViewController {
                     }
                 })
             }) {
-                let section = TableViewSectionViewModel(header: "Universal Link".localized(), footer: "Make sure you have the app installed. Tap each link to test. If labelled with NOT, it should open in Safari. Otherwise, it should open in the app.\n\n Tap (i) to duplicate and compose the link for custom testing.".localized(), rows: rows)
+                let section = TableViewSectionViewModel(header: "Universal Link".localized(), footer: "Make sure you have the app installed. Tap each link to test. If labelled with NOT, it should open in Safari. Otherwise, it should open in the app.\n\nTap (i) to duplicate and compose the link for custom testing.".localized(), rows: rows)
                 self.viewModel.sections = [section]
             }
 
