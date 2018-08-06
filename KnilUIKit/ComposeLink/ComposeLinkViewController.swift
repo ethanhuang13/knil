@@ -82,6 +82,7 @@ class ComposeLinkViewController: UITableViewController {
         let titleRow = TableViewCellViewModel(title: title, selectAction: {
             let alertController = UIAlertController(title: "Edit Link Title".localized(), message: "You can name this link.".localized(), preferredStyle: .alert)
             alertController.addTextField(configurationHandler: { (textField) in
+                textField.text = self.linkTitle
                 textField.clearButtonMode = .always
                 textField.autocapitalizationType = .words
             })
