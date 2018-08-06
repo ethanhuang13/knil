@@ -25,7 +25,7 @@ class SettingsViewController: UITableViewController {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.tint]
         }
-        navigationItem.title = "Settings".localized()
+        navigationItem.title = "About".localized()
 
         tableView.dataSource = tableViewViewModel
         tableView.delegate = tableViewViewModel
