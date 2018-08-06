@@ -32,10 +32,16 @@ Add websites, download related apps, test Universal Link, and customize test lin
 
 ## Install
 
-- Clone the repo on [GitHub](https://github.com/ethanhuang13/knil)
-- Open the project with Xcode 9 or above
-- Change bundle ID to something like `com.yourcompany.Knil`
-- Build and run on your iOS devices
+[![](App_Store_Badge.svg)](https://itunes.apple.com/us/app/knil-universal-link-testing/id1195310358?l=zh&ls=1&mt=8&ct=README)
+
+Download the official release version from [App Store](https://itunes.apple.com/us/app/knil-universal-link-testing/id1195310358?l=zh&ls=1&mt=8&ct=README).
+
+Or, you can install this open source app with the following steps:
+
+1. Clone the repo on [GitHub](https://github.com/ethanhuang13/knil)
+2. Open the project with Xcode 9 or above
+3. Change bundle ID to something like `com.yourcompany.Knil`
+4. Build and run on your iOS devices
 
 ## Contribution
 
