@@ -17,10 +17,10 @@ Add websites, download related apps, test Universal Link, and customize test lin
 | | Features |
 | --- | --- |
 | 😇 | Open source iOS project written in Swift 4 |
-| 📲 | Fetch and parse apple-app-site-association(AASA) file |
+| 📲 | Fetch and parse apple-app-site-association(AASA) files |
 | 💡 | App Store links and metadata |
-| 🚀 | List all Universal Links. One tap to test! |
-| 🛠️ | Customizable test links |
+| 🚀 | List all Universal Link paths. One-tap to test! |
+| 🛠️ | Customize test links |
 | 🤝 | Link to other validation tools like Branch.io's [AASA Validator](https://branch.io/resources/aasa-validator/) or Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool/) | 
 | 🆓 | Free without ads |
 | 🚫 | No third-party tracking or analytics |
