@@ -4,13 +4,13 @@
 
 [![](App_Store_Badge.svg)](https://itunes.apple.com/us/app/knil-universal-link-testing/id1195310358?l=zh&ls=1&mt=8&ct=README)
 
-Knil made Universal Link testing easier. It fetches and parses apple-app-site-association file for you to quickly check whether Universal Link is working.
+Knil made Universal Links testing easier. It fetches and parses apple-app-site-association file for you to quickly check whether Universal Links are working.
 
 ## Demo
 
-Add websites, download related apps, test Universal Link, and customize test links.
+Add websites, download related apps, test Universal Links, and customize test links.
 
-![Demo of user add IMDb to Knil and test its Universal Link.](demo.gif)
+![Demo of user add IMDb to Knil and test its Universal Links.](demo.gif)
 
 ## Features
 

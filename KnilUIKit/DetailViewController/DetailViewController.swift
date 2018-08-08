@@ -136,7 +136,7 @@ class DetailViewController: UITableViewController {
             rows.append(pasteLinkRow)
         }
 
-        let footer = customLinkRows.isEmpty ? "Add custom links for Universal Link testing.".localized() : "Add custom links for Universal Link testing. Tap (i) to duplicate and compose the link.".localized()
+        let footer = customLinkRows.isEmpty ? "Add custom links for testing.".localized() : "Add custom links for testing. Tap (i) to duplicate and compose the link.".localized()
         let customLinksSection = TableViewSectionViewModel(header: "Custom Links".localized(), footer: footer, rows: rows)
 
         return customLinksSection
@@ -163,7 +163,7 @@ class DetailViewController: UITableViewController {
 
             if //hasOnlyOneApp == false,
                 userAppID.supportsAppLinks {
-                let row = TableViewCellViewModel(title: "Universal Link".localized(), selectAction: {
+                let row = TableViewCellViewModel(title: "Universal Links".localized(), selectAction: {
                     self.showLinkViewController(userApp: userAppID)
                 })
                 rows.append(row)

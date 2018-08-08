@@ -17,7 +17,7 @@ extension UserApp {
     var cellSubtitle: String {
         let pairs: [(Int, String)] = [
             (1, "👥 Team ID: \(appID.teamID)"),
-            (paths?.count ?? 0, "🔗 %li Universal Link Paths"),
+            (paths?.count ?? 0, "🔗 %li Universal Links"),
             (supportsWebCredentials ? 1 : 0, "🤝 Activity Continuation"),
             (supportsActivityContinuation ? 1 : 0, "🔐 Web Credentials")
         ]
