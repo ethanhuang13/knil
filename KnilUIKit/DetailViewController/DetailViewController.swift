@@ -183,8 +183,8 @@ class DetailViewController: UITableViewController {
         vc.delegate = self
 
         let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .formSheet
         self.present(navController, animated: true, completion: nil)
-//        self.navigationController?.show(vc, sender: self)
     }
 
     private func download(_ appID: AppID) {

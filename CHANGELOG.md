@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Fixed
 - Universal Links plural
+- Link composer use form sheet for iPad #7
 
 ## [1.0.0(7)] - 2018-08-06
 ### Fixed
