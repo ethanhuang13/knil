@@ -1,6 +1,12 @@
 # Knil 🔗
 
-![](https://travis-ci.org/ethanhuang13/knil.svg?branch=master) ![GitHub release](https://img.shields.io/github/release/ethanhuang13/knil.svg) ![GitHub top language](https://img.shields.io/github/languages/top/ethanhuang13/knil.svg) [![GitHub](https://img.shields.io/github/license/ethanhuang13/knil.svg)](https://github.com/ethanhuang13/knil/blob/master/LICENSE)
+[![Travis CI](https://travis-ci.org/ethanhuang13/knil.svg?branch=master)](https://travis-ci.org/ethanhuang13/knil)
+![GitHub release](https://img.shields.io/github/release/ethanhuang13/knil.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/ethanhuang13/knil.svg)
+![](https://img.shields.io/badge/Platform-iOS%209.0%2B-lightgrey.svg)
+[![License](https://img.shields.io/github/license/ethanhuang13/knil.svg)](https://github.com/ethanhuang13/knil/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/badge/Twitter-%40ethanhuang13-blue.svg)](https://twitter.com/ethanhuang13)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/ethanhuang13)
 
 [![](App_Store_Badge.svg)](https://itunes.apple.com/us/app/knil-universal-link-testing/id1195310358?l=zh&ls=1&mt=8&ct=README)
 
