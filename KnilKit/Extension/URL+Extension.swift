@@ -13,8 +13,8 @@ extension URL {
         let request = URLRequest(url: self)
 
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                completion(.error(error))
+            if error != nil {
+                completion(.error(KnilKitError.cannotFetchFile))
                 return
             }
 
