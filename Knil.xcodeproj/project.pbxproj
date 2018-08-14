@@ -53,7 +53,6 @@
 		6CC52C1520F5ED6600C7A5B0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1420F5ED6600C7A5B0 /* Result.swift */; };
 		6CC52C1720F5F38700C7A5B0 /* iTunesSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1620F5F38700C7A5B0 /* iTunesSearchAPI.swift */; };
 		6CC52C1920F5F3AC00C7A5B0 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */; };
-		6CC52C1B20F6014700C7A5B0 /* AASAFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */; };
 		6CC52C1D20F60AD500C7A5B0 /* iTunesSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */; };
 		6CC82D2C21087AB900D13EF5 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D2B21087AB900D13EF5 /* UIAlertController+Extension.swift */; };
 		6CC82D31210EB11900D13EF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC82D30210EB11900D13EF5 /* SettingsViewController.swift */; };
@@ -186,7 +185,6 @@
 		6CC52C1420F5ED6600C7A5B0 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		6CC52C1620F5F38700C7A5B0 /* iTunesSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAPI.swift; sourceTree = "<group>"; };
 		6CC52C1820F5F3AB00C7A5B0 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
-		6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASAFetcherTests.swift; sourceTree = "<group>"; };
 		6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAPITests.swift; sourceTree = "<group>"; };
 		6CC82D2B21087AB900D13EF5 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		6CC82D30210EB11900D13EF5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -359,7 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				6CC52C1C20F60AD500C7A5B0 /* iTunesSearchAPITests.swift */,
-				6CC52C1A20F6014700C7A5B0 /* AASAFetcherTests.swift */,
 				6CC82D44210EEB3C00D13EF5 /* AASAURLSuggestorTests.swift */,
 				6C0D221120E0F6B900FBFA86 /* KnilKitTests-Info.plist */,
 				6CC52BEB20F4C0DD00C7A5B0 /* AASATests.swift */,
@@ -796,7 +793,6 @@
 				6CC52BEC20F4C0DD00C7A5B0 /* AASATests.swift in Sources */,
 				6CC82D45210EEB3C00D13EF5 /* AASAURLSuggestorTests.swift in Sources */,
 				6CC52BE820F4ADC200C7A5B0 /* AppLinksTests.swift in Sources */,
-				6CC52C1B20F6014700C7A5B0 /* AASAFetcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

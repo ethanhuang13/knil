@@ -83,6 +83,6 @@ class AASAURLSuggestorTests: XCTestCase {
             }
         }
 
-        wait(for: expectations, timeout: 5.0)
+        wait(for: expectations, timeout: 10.0)
     }
 }
