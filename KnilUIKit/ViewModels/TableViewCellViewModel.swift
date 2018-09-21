@@ -16,9 +16,9 @@ public struct TableViewCellViewModel {
     let subtitle: String?
     let image: UIImage?
     let reuseIdentifier: String
-    let cellStyle: UITableViewCellStyle
-    let selectionStyle: UITableViewCellSelectionStyle
-    let accessoryType: UITableViewCellAccessoryType
+    let cellStyle: UITableViewCell.CellStyle
+    let selectionStyle: UITableViewCell.SelectionStyle
+    let accessoryType: UITableViewCell.AccessoryType
     let editActions: [UITableViewRowAction]
     var selectAction: Closure
     var detailAction: Closure
@@ -26,9 +26,9 @@ public struct TableViewCellViewModel {
     public init(title: String,
                 subtitle: String? = nil,
                 image: UIImage? = nil,
-                cellStyle: UITableViewCellStyle = .default,
-                selectionStyle: UITableViewCellSelectionStyle = .default,
-                accessoryType: UITableViewCellAccessoryType = .disclosureIndicator,
+                cellStyle: UITableViewCell.CellStyle = .default,
+                selectionStyle: UITableViewCell.SelectionStyle = .default,
+                accessoryType: UITableViewCell.AccessoryType = .disclosureIndicator,
                 editActions: [UITableViewRowAction] = [],
                 selectAction: @escaping Closure = {},
                 detailAction: @escaping Closure = {}

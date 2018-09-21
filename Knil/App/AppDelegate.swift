@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIPasteboard.general.string
     }()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         UIView.appearance().tintColor = .tint
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if let pasteboardString = UIPasteboard.general.string,
             pasteboardString != currentPasteboardString {
-            NotificationCenter.default.post(name: .UIPasteboardChanged, object: nil)
+            NotificationCenter.default.post(name: UIPasteboard.changedNotification, object: nil)
             currentPasteboardString = pasteboardString
         }
     }

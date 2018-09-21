@@ -625,9 +625,11 @@
 				TargetAttributes = {
 					6C0D218E20E0F2A600FBFA86 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					6C0D21DC20E0F6B000FBFA86 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					6C0D21E420E0F6B000FBFA86 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -635,9 +637,11 @@
 					};
 					6C0D21FF20E0F6B900FBFA86 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					6C0D220720E0F6B900FBFA86 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 6C0D218E20E0F2A600FBFA86;
 					};
 				};
@@ -971,7 +975,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -990,7 +994,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.Knil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1017,7 +1021,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1046,7 +1050,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1115,7 +1119,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1144,7 +1148,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1165,7 +1169,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knil.app/Knil";
 			};
@@ -1185,7 +1189,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elaborapp.KnilKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knil.app/Knil";
 			};

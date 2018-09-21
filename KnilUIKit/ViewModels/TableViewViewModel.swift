@@ -60,7 +60,7 @@ public class TableViewViewModel: NSObject, UITableViewDataSource, UITableViewDel
         cellViewModel.detailAction()
     }
 
-    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
     }
 

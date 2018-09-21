@@ -46,7 +46,7 @@ class DetailViewController: UITableViewController {
             self.reloadData()
         })
 
-        NotificationCenter.default.addObserver(self, selector: #selector(pasteboardDidChange), name: .UIPasteboardChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(pasteboardDidChange), name: UIPasteboard.changedNotification, object: nil)
 
         reloadData()
     }

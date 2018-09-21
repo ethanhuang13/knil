@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+### Added
+- Support iOS 12 and Swift 4.2 #12
+
 ### Fixed
 - Universal Links plural
 - Link composer use form sheet for iPad #7
