@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Added "Use this URL" button, below "I'm Feeling Lucky"
 - Improve error message .cannotFetchFile with URL
+- /docs/privacy-policy.md
 
 ### Changed
 - Upgrade project to Swift 5
