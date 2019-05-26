@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added "Use this URL" button, below "I'm Feeling Lucky"
+- Improve error message .cannotFetchFile with URL
 
 ### Fixed
 - Fetch from /.well-known folder first #14
