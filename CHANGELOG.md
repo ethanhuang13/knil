@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0(9)] - 2019-05-26
 ### Added
 - Added "Use this URL" button, below "I'm Feeling Lucky"
 - Improve error message .cannotFetchFile with URL
