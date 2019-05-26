@@ -14,7 +14,7 @@ extension URL {
 
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil {
-                completion(.error(KnilKitError.cannotFetchFile))
+                completion(.error(KnilKitError.cannotFetchFile(self.absoluteString)))
                 return
             }
 

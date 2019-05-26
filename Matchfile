@@ -1,0 +1,7 @@
+git_url("https://github.com/ethanhuang13/elaborapp-match.git")
+
+app_identifier(["com.elaborapp.Knil"])
+# username("user@fastlane.tools") # Your Apple Developer Portal username
+
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options

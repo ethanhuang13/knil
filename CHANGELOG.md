@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0(9)] - 2019-05-26
+### Added
+- Added "Use this URL" button, below "I'm Feeling Lucky"
+- Improve error message .cannotFetchFile with URL
+
+### Changed
+- Upgrade project to Swift 5
+
+### Fixed
+- Fetch from /.well-known folder first #14
+- Throw .noData if appLinks, webCredentials, and activityContinuation are empty 
+
 ## [1.0.1(8)] - 2018-09-21
 ### Added
 - Support iOS 12 and Swift 4.2 #12

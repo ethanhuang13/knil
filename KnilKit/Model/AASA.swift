@@ -24,6 +24,12 @@ public struct AASA: Codable {
         appLinks = try values.decodeIfPresent(AppLinks.self, forKey: .appLinks)
         webCredentials = try values.decodeIfPresent(AppIDsWrapper.self, forKey: .webCredentials)
         activityContinuation = try values.decodeIfPresent(AppIDsWrapper.self, forKey: .activityContinuation)
+
+        if appLinks == nil
+            && webCredentials == nil
+            && activityContinuation == nil {
+            throw KnilKitError.noData
+        }
     }
 
     public func encode(to encoder: Encoder) throws {

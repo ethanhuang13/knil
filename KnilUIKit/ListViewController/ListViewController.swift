@@ -100,6 +100,7 @@ public class ListViewController: UITableViewController {
                     }
                 })
             }))
+            alertController.addAction(self.fetchingAlertAction(alertController: alertController))
             alertController.addAction(.cancelAction)
             self.present(alertController, animated: true, completion: { })
         }
@@ -117,55 +118,64 @@ public class ListViewController: UITableViewController {
                     textField.textContentType = .URL
                 }
             }
+            alertController.addAction(self.fetchingAlertAction(alertController: alertController, urlString: urlString, userAASA: userAASA))
+            alertController.addAction(.cancelAction)
+            self.present(alertController, animated: true, completion: { })
+        }
+    }
 
-            alertController.addAction(UIAlertAction(title: "Go".localized(), style: .default, handler: { (_) in
-                guard let string = alertController.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-                    fatalError("Missing textField")
+    private func fetchingAlertAction(alertController: UIAlertController,
+                                     urlString: String? = nil,
+                                     userAASA: UserAASA? = nil) -> UIAlertAction {
+        return UIAlertAction(title: "Use this URL".localized(), style: .default, handler: { (_) in
+            guard let text = alertController.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+                fatalError("Missing textField")
+            }
+
+            if let userAASA = userAASA,
+                text == urlString {
+                let updatedUserAASA = self.dataStore.upsert(userAASA)
+                self.showDetailViewController(userAASA: updatedUserAASA)
+            } else {
+                var urlString = text
+                if urlString.hasPrefix("http") == false {
+                    urlString = "https://" + urlString
                 }
 
-                if let userAASA = userAASA,
-                    string == urlString {
-                    let updatedUserAASA = self.dataStore.upsert(userAASA)
-                    self.showDetailViewController(userAASA: updatedUserAASA)
-                } else {
-                    guard let url = URL(string: string) else {
-                        self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: "URL invalid.".localized()), animated: true, completion: nil)
-                        return
-                    }
+                guard let url = URL(string: urlString) else {
+                    self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: "URL invalid.".localized()), animated: true, completion: nil)
+                    return
+                }
 
-                    AASAFetcher.fetch(url: url, completion: { (result) in
-                        DispatchQueue.main.async {
-                            switch result {
-                            case .value(let (aasa, redirectURL)):
-                                if url.absoluteString != redirectURL.absoluteString {
-                                    let message = String(format: "Redirected to %@.".localized(), redirectURL.absoluteString)
+                AASAFetcher.fetch(url: url, completion: { (result) in
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .value(let (aasa, redirectURL)):
+                            if url.absoluteString != redirectURL.absoluteString {
+                                let message = String(format: "Redirected to %@.".localized(), redirectURL.absoluteString)
 
-                                    let alertController = UIAlertController(title: "Redirection Occurred".localized(), message: message, preferredStyle: .alert)
-                                    alertController.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { (_) in
-                                        let userAASA = UserAASA(aasa: aasa, from: url)
-                                        let updatedUserAASA = self.dataStore.upsert(userAASA)
-                                        self.showDetailViewController(userAASA: updatedUserAASA)
-                                        self.dataStore.archive()
-                                    }))
-                                    self.present(alertController, animated: true, completion: { })
-                                } else {
+                                let alertController = UIAlertController(title: "Redirection Occurred".localized(), message: message, preferredStyle: .alert)
+                                alertController.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { (_) in
                                     let userAASA = UserAASA(aasa: aasa, from: url)
                                     let updatedUserAASA = self.dataStore.upsert(userAASA)
                                     self.showDetailViewController(userAASA: updatedUserAASA)
                                     self.dataStore.archive()
-                                }
-
-                            case .error(let error):
-                                self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: error.localizedDescription), animated: true, completion: nil)
+                                }))
+                                self.present(alertController, animated: true, completion: { })
+                            } else {
+                                let userAASA = UserAASA(aasa: aasa, from: url)
+                                let updatedUserAASA = self.dataStore.upsert(userAASA)
+                                self.showDetailViewController(userAASA: updatedUserAASA)
+                                self.dataStore.archive()
                             }
-                        }
-                    })
-                }
-            }))
 
-            alertController.addAction(.cancelAction)
-            self.present(alertController, animated: true, completion: { })
-        }
+                        case .error(let error):
+                            self.present(UIAlertController.cancelAlertController(title: "Error".localized(), message: error.localizedDescription), animated: true, completion: nil)
+                        }
+                    }
+                })
+            }
+        })
     }
 
     private func showDetailViewController(userAASA: UserAASA) {

@@ -22,7 +22,7 @@ Add websites, download related apps, test Universal Links, and customize test li
 
 | | Features |
 | --- | --- |
-| 😇 | Open source iOS project written in Swift 4 |
+| 😇 | Open source iOS project written in Swift 5 |
 | 📲 | Fetch and parse apple-app-site-association(AASA) files |
 | 💡 | App Store links and metadata |
 | 🚀 | List all Universal Link paths. One-tap to test! |
@@ -45,7 +45,7 @@ Download the official release version from [App Store](https://itunes.apple.com/
 Or, you can install this open source app with the following steps:
 
 1. Clone the repo on [GitHub](https://github.com/ethanhuang13/knil)
-2. Open the project with Xcode 9 or above
+2. Open the project with Xcode 10.2 or above
 3. Change bundle ID to something like `com.yourcompany.Knil`
 4. Build and run on your iOS devices
 

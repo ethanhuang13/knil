@@ -11,7 +11,7 @@ import Foundation
 public enum KnilKitError: Error {
     case invalidURLString(String)
     case noData
-    case cannotFetchFile
+    case cannotFetchFile(String)
 }
 
 extension KnilKitError: LocalizedError {
@@ -21,8 +21,8 @@ extension KnilKitError: LocalizedError {
             return "Invalid URL: \(urlString)."
         case .noData:
             return "Sorry, no data."
-        case .cannotFetchFile:
-            return "Cannot fetch the file."
+        case .cannotFetchFile(let urlString):
+            return "Cannot fetch the file from \(urlString)."
         }
     }
 }
