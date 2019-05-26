@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fetch from /.well-known folder first #14
+- Throw .noData if appLinks, webCredentials, and activityContinuation are empty 
 
 ## [1.0.1(8)] - 2018-09-21
 ### Added
