@@ -59,19 +59,19 @@ public struct AASAURLSuggestor {
     }
 
     public static func suggestAASA(from string: String, completion: @escaping (_ result: Result<UserAASA>) -> Void) {
-        guard let url = suggestURL(from: string),
-            let wellKnownURL = suggestURL(from: string, wellKnown: true) else {
-            completion(.error(KnilKitError.invalidURLString(string)))
-            return
+        guard let wellKnownURL = suggestURL(from: string, wellKnown: true),
+            let url = suggestURL(from: string) else {
+                completion(.error(KnilKitError.invalidURLString(string)))
+                return
         }
 
-        AASAFetcher.fetch(url: url) { (result) in
+        AASAFetcher.fetch(url: wellKnownURL) { (result) in
             switch result {
-            case .value(let (aasa, url)):
-                let userAASA = UserAASA(aasa: aasa, from: url)
+            case .value(let (aasa, wellKnownURL)):
+                let userAASA = UserAASA(aasa: aasa, from: wellKnownURL)
                 completion(.value(userAASA))
             case .error(_):
-                AASAFetcher.fetch(url: wellKnownURL, completion: { (result) in
+                AASAFetcher.fetch(url: url, completion: { (result) in
                     switch result {
                     case .value(let (aasa, url)):
                         let userAASA = UserAASA(aasa: aasa, from: url)
