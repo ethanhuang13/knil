@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Added "Use this URL" button, below "I'm Feeling Lucky"
+
 ### Fixed
 - Fetch from /.well-known folder first #14
 - Throw .noData if appLinks, webCredentials, and activityContinuation are empty 
