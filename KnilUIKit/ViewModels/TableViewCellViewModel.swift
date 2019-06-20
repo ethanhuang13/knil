@@ -46,7 +46,6 @@ public struct TableViewCellViewModel {
     }
 
     func configure(_ cell: UITableViewCell) {
-        cell.backgroundColor = .background
         cell.textLabel?.text = title
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = subtitle

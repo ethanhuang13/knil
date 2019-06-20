@@ -10,6 +10,6 @@ import UIKit
 
 extension UINavigationController {
     override open var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
 }
