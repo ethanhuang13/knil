@@ -10,8 +10,6 @@
 		6C0D219320E0F2A700FBFA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D219220E0F2A700FBFA86 /* AppDelegate.swift */; };
 		6C0D219A20E0F2A800FBFA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D219920E0F2A800FBFA86 /* Assets.xcassets */; };
 		6C0D219D20E0F2A800FBFA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D219B20E0F2A800FBFA86 /* LaunchScreen.storyboard */; };
-		6C0D21D520E0F53500FBFA86 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D21D420E0F53500FBFA86 /* README.md */; };
-		6C0D21D720E0F55300FBFA86 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D21D620E0F55300FBFA86 /* CHANGELOG.md */; };
 		6C0D21E620E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; };
 		6C0D21ED20E0F6B000FBFA86 /* KnilUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D21EC20E0F6B000FBFA86 /* KnilUIKitTests.swift */; };
 		6C0D21F220E0F6B000FBFA86 /* KnilUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D21DD20E0F6B000FBFA86 /* KnilUIKit.framework */; };
@@ -675,8 +673,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C0D21D520E0F53500FBFA86 /* README.md in Resources */,
-				6C0D21D720E0F55300FBFA86 /* CHANGELOG.md in Resources */,
 				6C0D219D20E0F2A800FBFA86 /* LaunchScreen.storyboard in Resources */,
 				6C0D219A20E0F2A800FBFA86 /* Assets.xcassets in Resources */,
 			);
